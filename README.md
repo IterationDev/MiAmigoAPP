@@ -1,7 +1,2 @@
-# MiAmigoV1
-
-A new Flutter project.
-
-## Getting Started
-
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+# MiAmigoAPP
+Desarrollo y gestión de la App MiAmigo
