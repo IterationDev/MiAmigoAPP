@@ -229,8 +229,8 @@ CON UN TOQUE */
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1622861429852-43d53e19a66b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxET1dOJTIwU1lORFJPTUV8ZW58MHx8fHwxNzQ0MDQ5NTA3fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                          child: Image.asset(
+                                            'assets/images/mod1-perfil.jpg',
                                             fit: BoxFit.cover,
                                           ),
                                         ),

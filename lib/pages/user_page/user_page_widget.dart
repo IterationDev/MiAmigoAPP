@@ -254,8 +254,8 @@ class _UserPageWidgetState extends State<UserPageWidget>
             child: Stack(
               alignment: AlignmentDirectional(0.0, -1.0),
               children: [
-                Image.network(
-                  'https://images.unsplash.com/photo-1554126807-6b10f6f6692a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxCT1l8ZW58MHx8fHwxNzQzMTE2NDA0fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                Image.asset(
+                  'assets/images/mod1-selfi.jpg',
                   width: double.infinity,
                   height: 300.0,
                   fit: BoxFit.cover,
