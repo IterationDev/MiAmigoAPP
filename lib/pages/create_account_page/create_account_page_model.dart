@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'create_account_page_widget.dart' show CreateAccountPageWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -17,18 +18,18 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
       tabBarController != null ? tabBarController!.index : 0;
 
   // State field(s) for name widget.
-  FocusNode? nameFocusNode;
-  TextEditingController? nameTextController;
-  String? Function(BuildContext, String?)? nameTextControllerValidator;
+  FocusNode? nameFocusNode1;
+  TextEditingController? nameTextController1;
+  String? Function(BuildContext, String?)? nameTextController1Validator;
   // State field(s) for email widget.
-  FocusNode? emailFocusNode;
-  TextEditingController? emailTextController;
-  String? Function(BuildContext, String?)? emailTextControllerValidator;
+  FocusNode? emailFocusNode1;
+  TextEditingController? emailTextController1;
+  String? Function(BuildContext, String?)? emailTextController1Validator;
   // State field(s) for birdthDay widget.
-  FocusNode? birdthDayFocusNode;
-  TextEditingController? birdthDayTextController;
-  final birdthDayMask = MaskTextInputFormatter(mask: '##/##/####');
-  String? Function(BuildContext, String?)? birdthDayTextControllerValidator;
+  FocusNode? birdthDayFocusNode1;
+  TextEditingController? birdthDayTextController1;
+  final birdthDayMask1 = MaskTextInputFormatter(mask: '##/##/####');
+  String? Function(BuildContext, String?)? birdthDayTextController1Validator;
   // State field(s) for cont1 widget.
   FocusNode? cont1FocusNode;
   TextEditingController? cont1TextController;
@@ -56,6 +57,30 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   TextEditingController? phone3TextController;
   final phone3Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
   String? Function(BuildContext, String?)? phone3TextControllerValidator;
+  // State field(s) for catDiscap widget.
+  String? catDiscapValue;
+  FormFieldController<String>? catDiscapValueController;
+  // State field(s) for tipDiscap widget.
+  String? tipDiscapValue;
+  FormFieldController<String>? tipDiscapValueController;
+  // State field(s) for name widget.
+  FocusNode? nameFocusNode2;
+  TextEditingController? nameTextController2;
+  String? Function(BuildContext, String?)? nameTextController2Validator;
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode2;
+  TextEditingController? emailTextController2;
+  String? Function(BuildContext, String?)? emailTextController2Validator;
+  // State field(s) for birdthDay widget.
+  FocusNode? birdthDayFocusNode2;
+  TextEditingController? birdthDayTextController2;
+  final birdthDayMask2 = MaskTextInputFormatter(mask: '##/##/####');
+  String? Function(BuildContext, String?)? birdthDayTextController2Validator;
+  // State field(s) for phone widget.
+  FocusNode? phoneFocusNode;
+  TextEditingController? phoneTextController;
+  final phoneMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  String? Function(BuildContext, String?)? phoneTextControllerValidator;
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
   TextEditingController? passwordTextController;
@@ -66,9 +91,9 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   TextEditingController? rePasswordTextController;
   late bool rePasswordVisibility;
   String? Function(BuildContext, String?)? rePasswordTextControllerValidator;
-  // State field(s) for catDiscap widget.
-  String? catDiscapValue;
-  FormFieldController<String>? catDiscapValueController;
+  // State field(s) for cargo widget.
+  List<String>? cargoValue;
+  FormFieldController<List<String>>? cargoValueController;
 
   @override
   void initState(BuildContext context) {
@@ -79,14 +104,14 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   @override
   void dispose() {
     tabBarController?.dispose();
-    nameFocusNode?.dispose();
-    nameTextController?.dispose();
+    nameFocusNode1?.dispose();
+    nameTextController1?.dispose();
 
-    emailFocusNode?.dispose();
-    emailTextController?.dispose();
+    emailFocusNode1?.dispose();
+    emailTextController1?.dispose();
 
-    birdthDayFocusNode?.dispose();
-    birdthDayTextController?.dispose();
+    birdthDayFocusNode1?.dispose();
+    birdthDayTextController1?.dispose();
 
     cont1FocusNode?.dispose();
     cont1TextController?.dispose();
@@ -105,6 +130,18 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
 
     phone3FocusNode?.dispose();
     phone3TextController?.dispose();
+
+    nameFocusNode2?.dispose();
+    nameTextController2?.dispose();
+
+    emailFocusNode2?.dispose();
+    emailTextController2?.dispose();
+
+    birdthDayFocusNode2?.dispose();
+    birdthDayTextController2?.dispose();
+
+    phoneFocusNode?.dispose();
+    phoneTextController?.dispose();
 
     passwordFocusNode?.dispose();
     passwordTextController?.dispose();

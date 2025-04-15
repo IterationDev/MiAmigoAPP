@@ -165,397 +165,347 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // UserPage
   {
-    'cpbtg0n4': {
-      'es': 'TUTORIALES',
-      'en': '',
-      'fr': '',
-    },
-    '6x674kiv': {
-      'es': 'USER NAME',
-      'en': '',
-      'fr': '',
-    },
-    'i09ucywv': {
+    '4b0bfl84': {
       'es': 'COMO ME SIENTO',
       'en': '',
       'fr': '',
     },
-    'l7w4q67c': {
+    'dl5x1mwg': {
       'es': 'Contacta',
       'en': '',
       'fr': '',
     },
-    'y4a5tqn3': {
-      'es': 'PAPA',
-      'en': '',
-      'fr': '',
-    },
-    'e282r4pf': {
-      'es': '55-50-31-72-09',
-      'en': '',
-      'fr': '',
-    },
-    'lzin64tz': {
-      'es': 'MAMA',
-      'en': '',
-      'fr': '',
-    },
-    '598w7mgf': {
-      'es': '55-42-85-42-35',
-      'en': '',
-      'fr': '',
-    },
-    'b3ml2bj9': {
-      'es': 'ABUELA',
-      'en': '',
-      'fr': '',
-    },
-    '3wbq8qhg': {
-      'es': '55-65-75-25-42',
-      'en': '',
-      'fr': '',
-    },
-    '4c6efwb0': {
-      'es': 'ABUELO',
-      'en': '',
-      'fr': '',
-    },
-    'nr9uxsdl': {
-      'es': '55-96-23-58-45',
-      'en': '',
-      'fr': '',
-    },
-    'yydpnfpp': {
+    '7fw2rjxd': {
       'es': 'Añadir otro...',
       'en': '',
       'fr': '',
     },
-    'd6vtcsba': {
+    'uksl23gb': {
       'es': 'Juega',
       'en': '',
       'fr': '',
     },
-    '2o45dsk7': {
+    'cwajhnp3': {
       'es': 'BUSCA TU JUEGO FAVORITO...',
       'en': '',
       'fr': '',
     },
-    'gl7mouvb': {
+    '20zgjmjn': {
       'es': '',
       'en': '',
       'fr': '',
     },
-    'l7hqi9vi': {
+    'xaahiy9w': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    '50h4lzls': {
+    'qb5up978': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    '3shrk9qv': {
+    'msuiq8hu': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'lprl52c6': {
+    '2qwuvpza': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'dmdzjm1t': {
+    'vhrrzybg': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    '4uygsv5c': {
+    'uttuf2kl': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'bmajwum9': {
+    'dbxgksh6': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'w7snzh9f': {
+    '81nnolue': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'b0tik77a': {
+    'z66eaavo': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'm4qy98gi': {
+    'gawyi2ya': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    '75u0khtp': {
+    'l5cdl3gk': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'euxsa089': {
+    '6unw8158': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'ur378dqu': {
+    'py3hp22s': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'g1laur0p': {
+    '8kk6mued': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'fh4all0s': {
+    'v8ta5uxu': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    '1dds5vsd': {
+    't5rwzpzg': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'ek7wrcgz': {
+    'pm5jcbdl': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'o000xqdl': {
+    'g3fhkbm9': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'ijnd41x1': {
+    'jf6grzrz': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'oan81sqd': {
+    'eh23gczt': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'tmzdg5dt': {
+    'yztw6bo2': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'dqbtwd9g': {
+    '2ncded7q': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'egn8pjfy': {
+    '0lz47p9r': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'a2g6xruc': {
+    'enbwwrx2': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'derld2a0': {
+    'ezu9v4kr': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'st9ux8na': {
+    'tdvt763p': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'xml5hyv1': {
+    'n6himrgf': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'icwblkc1': {
+    'erzfxl1q': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'nho75soc': {
+    'l56rfzcg': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'qva8z55n': {
+    'z7v4xymp': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'erlt57jf': {
+    'w29a8d79': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    '25ybt6pr': {
+    'q7i9cg2n': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    '6sunbe47': {
+    'vd8xpdt2': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'ru5tx3as': {
+    'n15otxro': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'o8dj1fzd': {
+    'jdeiq81o': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    '1a0wnl8p': {
+    'x1wc2ckk': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'p1a2rz1x': {
+    'xks8sqzm': {
       'es': 'DIFICULTAD:',
       'en': '',
       'fr': '',
     },
-    'b9yti7j8': {
+    'z168mf9n': {
       'es': 'Hello World',
       'en': '',
       'fr': '',
     },
-    'ovrtzq6y': {
+    '1e6cn5pm': {
       'es': 'NAME GAME1',
       'en': '',
       'fr': '',
     },
-    'pzakg7fm': {
+    'e4rf1d7k': {
       'es': '50%',
       'en': '',
       'fr': '',
     },
-    'nysqibbl': {
+    's83mq0d3': {
       'es': 'Descubre',
       'en': '',
       'fr': '',
     },
-    '7yjf7c4x': {
+    '1c4ssnyx': {
       'es': 'QUE QUIERES LEER HOY...',
       'en': '',
       'fr': '',
     },
-    'lgbuvvd4': {
+    'z1d7pcy9': {
       'es': '',
       'en': '',
       'fr': '',
     },
-    'vi54olkm': {
+    'nfhij7z4': {
       'es': 'El trenecito que si pudo.',
       'en': '',
       'fr': '',
     },
-    'gjd378m6': {
+    't33gktjd': {
       'es': 'By Ellen Fraud',
       'en': '',
       'fr': '',
     },
-    '6jd6hzrn': {
+    'on0ohvi5': {
       'es': '5 min ',
       'en': '',
       'fr': '',
     },
-    '28rywgo2': {
+    '0dpw0w9z': {
       'es': 'Narración Disponible',
       'en': '',
       'fr': '',
     },
-    'qhpi7e1w': {
+    'bvn9wc43': {
       'es': 'El trenecito que si pudo.',
       'en': '',
       'fr': '',
     },
-    '0klb1cl0': {
+    'im85b2km': {
       'es': 'By Ellen Fraud',
       'en': '',
       'fr': '',
     },
-    'bpo6dmu8': {
+    'izdc331g': {
       'es': '5 min ',
       'en': '',
       'fr': '',
     },
-    'mu9y8wkz': {
+    'z6g659x7': {
       'es': 'Narración Disponible',
       'en': '',
       'fr': '',
     },
-    'b7emc5dn': {
+    'mlsrg50u': {
       'es': 'El trenecito que si pudo.',
       'en': '',
       'fr': '',
     },
-    '77urlasn': {
+    'xknwe5ce': {
       'es': 'By Ellen Fraud',
       'en': '',
       'fr': '',
     },
-    'we0gtx8n': {
+    'ef2rzswy': {
       'es': '5 min ',
       'en': '',
       'fr': '',
     },
-    'prqj82n2': {
+    'm6hvy8ec': {
       'es': 'Narración Disponible',
       'en': '',
       'fr': '',
     },
-    'vxdyms2b': {
+    'othtifpc': {
       'es': 'El trenecito que si pudo.',
       'en': '',
       'fr': '',
     },
-    'aqzyq7qf': {
+    'mhyv0naa': {
       'es': 'By Ellen Fraud',
       'en': '',
       'fr': '',
     },
-    'ddfsnvs1': {
+    'xldfa4et': {
       'es': '5 min ',
       'en': '',
       'fr': '',
     },
-    'bwpd0j65': {
+    'vhxnnp90': {
       'es': 'Narración Disponible',
       'en': '',
       'fr': '',
     },
-    '9p50up7j': {
+    'd137teux': {
       'es': 'El trenecito que si pudo.',
       'en': '',
       'fr': '',
     },
-    '02p3qjoj': {
+    '9ns37sa0': {
       'es': 'By Ellen Fraud',
       'en': '',
       'fr': '',
     },
-    'fla8hjaa': {
+    '9b9ytopb': {
       'es': '5 min ',
       'en': '',
       'fr': '',
     },
-    'i9teudi3': {
+    'e452737q': {
       'es': 'Narración Disponible',
       'en': '',
       'fr': '',
@@ -2393,28 +2343,93 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'r3deh9pz': {
-      'es': 'Contraseña',
-      'en': '',
-      'fr': '',
-    },
-    '3gmogvx0': {
-      'es': 'Repita su contraseña',
-      'en': '',
-      'fr': '',
-    },
     'jwz9eur3': {
       'es': 'Elige la categoria de capacidad especial',
       'en': '',
       'fr': '',
     },
     'd9w0lutu': {
-      'es': 'Search...',
+      'es': 'Buscar',
+      'en': '',
+      'fr': '',
+    },
+    'asvrm7dl': {
+      'es': 'Elige el tipo de capacidad especial',
+      'en': '',
+      'fr': '',
+    },
+    'hxtvuv5u': {
+      'es': 'Buscar',
+      'en': '',
+      'fr': '',
+    },
+    '6ygndyf3': {
+      'es': 'CREAR',
       'en': '',
       'fr': '',
     },
     '71buvaye': {
       'es': 'Crear Tutor',
+      'en': '',
+      'fr': '',
+    },
+    'kl1dp7vp': {
+      'es': 'CREA TU CUENTA DE TUTOR',
+      'en': '',
+      'fr': '',
+    },
+    'uo916d20': {
+      'es': 'Comienza llenando los datos que se piden.',
+      'en': '',
+      'fr': '',
+    },
+    'pjtqlcbp': {
+      'es': 'Nombre y Apellido',
+      'en': '',
+      'fr': '',
+    },
+    'uee86w7v': {
+      'es': 'Correo Electronico',
+      'en': '',
+      'fr': '',
+    },
+    'liujh8ia': {
+      'es': 'Fecha de Nacimiento',
+      'en': '',
+      'fr': '',
+    },
+    'e48m4kvz': {
+      'es': 'Telefono celular',
+      'en': '',
+      'fr': '',
+    },
+    'fevkt0ea': {
+      'es': 'Contraseña',
+      'en': '',
+      'fr': '',
+    },
+    'zhd5ru27': {
+      'es': 'Repita su contraseña',
+      'en': '',
+      'fr': '',
+    },
+    '27d0ptke': {
+      'es': 'De quien eres tutor',
+      'en': '',
+      'fr': '',
+    },
+    '1kdpnydr': {
+      'es': 'Buscar',
+      'en': '',
+      'fr': '',
+    },
+    'jx4pbbdu': {
+      'es': 'Completo',
+      'en': '',
+      'fr': '',
+    },
+    '1c0xv14z': {
+      'es': 'CREAR',
       'en': '',
       'fr': '',
     },
