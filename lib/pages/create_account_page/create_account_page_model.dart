@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/index.dart';
@@ -16,6 +17,8 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
+  int get tabBarPreviousIndex =>
+      tabBarController != null ? tabBarController!.previousIndex : 0;
 
   // State field(s) for name widget.
   FocusNode? nameFocusNode1;
@@ -25,6 +28,10 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   FocusNode? emailFocusNode1;
   TextEditingController? emailTextController1;
   String? Function(BuildContext, String?)? emailTextController1Validator;
+  // State field(s) for phoneNum widget.
+  FocusNode? phoneNumFocusNode;
+  TextEditingController? phoneNumTextController;
+  String? Function(BuildContext, String?)? phoneNumTextControllerValidator;
   // State field(s) for birdthDay widget.
   FocusNode? birdthDayFocusNode1;
   TextEditingController? birdthDayTextController1;
@@ -48,21 +55,14 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   TextEditingController? phone2TextController;
   final phone2Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
   String? Function(BuildContext, String?)? phone2TextControllerValidator;
-  // State field(s) for cont3 widget.
-  FocusNode? cont3FocusNode;
-  TextEditingController? cont3TextController;
-  String? Function(BuildContext, String?)? cont3TextControllerValidator;
-  // State field(s) for phone3 widget.
-  FocusNode? phone3FocusNode;
-  TextEditingController? phone3TextController;
-  final phone3Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
-  String? Function(BuildContext, String?)? phone3TextControllerValidator;
   // State field(s) for catDiscap widget.
   String? catDiscapValue;
   FormFieldController<String>? catDiscapValueController;
   // State field(s) for tipDiscap widget.
   String? tipDiscapValue;
   FormFieldController<String>? tipDiscapValueController;
+  // Stores action output result for [Backend Call - Create Document] action in confirm widget.
+  ContacsRecord? userCreated;
   // State field(s) for name widget.
   FocusNode? nameFocusNode2;
   TextEditingController? nameTextController2;
@@ -110,6 +110,9 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
     emailFocusNode1?.dispose();
     emailTextController1?.dispose();
 
+    phoneNumFocusNode?.dispose();
+    phoneNumTextController?.dispose();
+
     birdthDayFocusNode1?.dispose();
     birdthDayTextController1?.dispose();
 
@@ -124,12 +127,6 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
 
     phone2FocusNode?.dispose();
     phone2TextController?.dispose();
-
-    cont3FocusNode?.dispose();
-    cont3TextController?.dispose();
-
-    phone3FocusNode?.dispose();
-    phone3TextController?.dispose();
 
     nameFocusNode2?.dispose();
     nameTextController2?.dispose();

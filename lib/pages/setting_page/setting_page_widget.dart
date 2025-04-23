@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'setting_page_model.dart';
 export 'setting_page_model.dart';
 
@@ -71,8 +72,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 'px7tylqd' /* Settings Page */,
               ),
               style: FlutterFlowTheme.of(context).headlineSmall.override(
-                    fontFamily: 'Poppins',
+                    font: GoogleFonts.poppins(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                   ),
             ),
           ),
@@ -83,8 +93,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 'm0dpvi2o' /* Please evaluate your options b... */,
               ),
               style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Roboto',
+                    font: GoogleFonts.roboto(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).labelMedium.fontStyle,
                   ),
             ),
           ),
@@ -110,8 +129,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -141,8 +173,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -172,8 +217,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -203,8 +261,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -234,8 +305,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -265,8 +349,21 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Poppins',
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Icon(
@@ -288,8 +385,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 '8tigulmo' /* Follow us on */,
               ),
               style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Roboto',
+                    font: GoogleFonts.roboto(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).labelMedium.fontStyle,
                   ),
             ),
           ),
@@ -369,8 +475,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 '9m0njtv7' /* App Versions */,
               ),
               style: FlutterFlowTheme.of(context).titleLarge.override(
-                    fontFamily: 'Poppins',
+                    font: GoogleFonts.poppins(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).titleLarge.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).titleLarge.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).titleLarge.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).titleLarge.fontStyle,
                   ),
             ),
           ),
@@ -381,8 +496,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 'estwmcgi' /* v0.0.1 */,
               ),
               style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Roboto',
+                    font: GoogleFonts.roboto(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).labelMedium.fontStyle,
                   ),
             ),
           ),
@@ -399,8 +523,17 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                 iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                 color: FlutterFlowTheme.of(context).secondaryBackground,
                 textStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      fontFamily: 'Roboto',
+                      font: GoogleFonts.roboto(
+                        fontWeight:
+                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                      ),
                       letterSpacing: 0.0,
+                      fontWeight:
+                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
                     ),
                 elevation: 0.0,
                 borderSide: BorderSide(

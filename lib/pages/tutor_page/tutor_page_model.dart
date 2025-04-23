@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
-import 'user_page_widget.dart' show UserPageWidget;
+import 'tutor_page_widget.dart' show TutorPageWidget;
 import 'package:flutter/material.dart';
 
-class UserPageModel extends FlutterFlowModel<UserPageWidget> {
+class TutorPageModel extends FlutterFlowModel<TutorPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TabBar widget.

@@ -8,6 +8,7 @@ import 'schema/util/firestore_util.dart';
 import 'schema/tipos_de_disc_record.dart';
 import 'schema/users_record.dart';
 import 'schema/users_auth_record.dart';
+import 'schema/contacs_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -19,6 +20,7 @@ export 'schema/util/schema_util.dart';
 export 'schema/tipos_de_disc_record.dart';
 export 'schema/users_record.dart';
 export 'schema/users_auth_record.dart';
+export 'schema/contacs_record.dart';
 
 /// Functions to query TiposDeDiscRecords (as a Stream and as a Future).
 Future<int> queryTiposDeDiscRecordCount({
@@ -126,6 +128,46 @@ Future<List<UsersAuthRecord>> queryUsersAuthRecordOnce({
     queryCollectionOnce(
       UsersAuthRecord.collection,
       UsersAuthRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query ContacsRecords (as a Stream and as a Future).
+Future<int> queryContacsRecordCount({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      ContacsRecord.collection(parent),
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<ContacsRecord>> queryContacsRecord({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ContacsRecord.collection(parent),
+      ContacsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ContacsRecord>> queryContacsRecordOnce({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ContacsRecord.collection(parent),
+      ContacsRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

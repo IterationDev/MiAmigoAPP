@@ -125,6 +125,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: CreateAccountPageWidget.routeName,
           path: CreateAccountPageWidget.routePath,
           builder: (context, params) => CreateAccountPageWidget(),
+        ),
+        FFRoute(
+          name: TutorPageWidget.routeName,
+          path: TutorPageWidget.routePath,
+          builder: (context, params) => TutorPageWidget(),
+        ),
+        FFRoute(
+          name: CreateAccountPhotosPageWidget.routeName,
+          path: CreateAccountPhotosPageWidget.routePath,
+          builder: (context, params) => CreateAccountPhotosPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

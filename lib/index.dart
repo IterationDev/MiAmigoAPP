@@ -9,3 +9,6 @@ export '/pages/onboarding_page/onboarding_page_widget.dart'
     show OnboardingPageWidget;
 export '/pages/create_account_page/create_account_page_widget.dart'
     show CreateAccountPageWidget;
+export '/pages/tutor_page/tutor_page_widget.dart' show TutorPageWidget;
+export '/pages/create_account_photos_page/create_account_photos_page_widget.dart'
+    show CreateAccountPhotosPageWidget;

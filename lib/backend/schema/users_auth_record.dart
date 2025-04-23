@@ -40,36 +40,6 @@ class UsersAuthRecord extends FirestoreRecord {
   DateTime? get createdTime => _createdTime;
   bool hasCreatedTime() => _createdTime != null;
 
-  // "phone1Name" field.
-  String? _phone1Name;
-  String get phone1Name => _phone1Name ?? '';
-  bool hasPhone1Name() => _phone1Name != null;
-
-  // "phone1" field.
-  String? _phone1;
-  String get phone1 => _phone1 ?? '';
-  bool hasPhone1() => _phone1 != null;
-
-  // "phone2Name" field.
-  String? _phone2Name;
-  String get phone2Name => _phone2Name ?? '';
-  bool hasPhone2Name() => _phone2Name != null;
-
-  // "phone2" field.
-  String? _phone2;
-  String get phone2 => _phone2 ?? '';
-  bool hasPhone2() => _phone2 != null;
-
-  // "phone3Name" field.
-  String? _phone3Name;
-  String get phone3Name => _phone3Name ?? '';
-  bool hasPhone3Name() => _phone3Name != null;
-
-  // "phone3" field.
-  String? _phone3;
-  String get phone3 => _phone3 ?? '';
-  bool hasPhone3() => _phone3 != null;
-
   // "birthday" field.
   String? _birthday;
   String get birthday => _birthday ?? '';
@@ -90,22 +60,58 @@ class UsersAuthRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
+  // "phoneNames" field.
+  List<String>? _phoneNames;
+  List<String> get phoneNames => _phoneNames ?? const [];
+  bool hasPhoneNames() => _phoneNames != null;
+
+  // "phones" field.
+  List<String>? _phones;
+  List<String> get phones => _phones ?? const [];
+  bool hasPhones() => _phones != null;
+
+  // "photo_url_Cont1" field.
+  String? _photoUrlCont1;
+  String get photoUrlCont1 => _photoUrlCont1 ?? '';
+  bool hasPhotoUrlCont1() => _photoUrlCont1 != null;
+
+  // "photo_url_Cont2" field.
+  String? _photoUrlCont2;
+  String get photoUrlCont2 => _photoUrlCont2 ?? '';
+  bool hasPhotoUrlCont2() => _photoUrlCont2 != null;
+
+  // "photo_url_Cont3" field.
+  String? _photoUrlCont3;
+  String get photoUrlCont3 => _photoUrlCont3 ?? '';
+  bool hasPhotoUrlCont3() => _photoUrlCont3 != null;
+
+  // "photo_url_Cont4" field.
+  String? _photoUrlCont4;
+  String get photoUrlCont4 => _photoUrlCont4 ?? '';
+  bool hasPhotoUrlCont4() => _photoUrlCont4 != null;
+
+  // "photo_url_Cont5" field.
+  String? _photoUrlCont5;
+  String get photoUrlCont5 => _photoUrlCont5 ?? '';
+  bool hasPhotoUrlCont5() => _photoUrlCont5 != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
     _photoUrl = snapshotData['photo_url'] as String?;
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
-    _phone1Name = snapshotData['phone1Name'] as String?;
-    _phone1 = snapshotData['phone1'] as String?;
-    _phone2Name = snapshotData['phone2Name'] as String?;
-    _phone2 = snapshotData['phone2'] as String?;
-    _phone3Name = snapshotData['phone3Name'] as String?;
-    _phone3 = snapshotData['phone3'] as String?;
     _birthday = snapshotData['birthday'] as String?;
     _catDisc = snapshotData['catDisc'] as String?;
     _tipDisc = snapshotData['tipDisc'] as String?;
     _phoneNumber = snapshotData['phone_number'] as String?;
+    _phoneNames = getDataList(snapshotData['phoneNames']);
+    _phones = getDataList(snapshotData['phones']);
+    _photoUrlCont1 = snapshotData['photo_url_Cont1'] as String?;
+    _photoUrlCont2 = snapshotData['photo_url_Cont2'] as String?;
+    _photoUrlCont3 = snapshotData['photo_url_Cont3'] as String?;
+    _photoUrlCont4 = snapshotData['photo_url_Cont4'] as String?;
+    _photoUrlCont5 = snapshotData['photo_url_Cont5'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -148,16 +154,15 @@ Map<String, dynamic> createUsersAuthRecordData({
   String? photoUrl,
   String? uid,
   DateTime? createdTime,
-  String? phone1Name,
-  String? phone1,
-  String? phone2Name,
-  String? phone2,
-  String? phone3Name,
-  String? phone3,
   String? birthday,
   String? catDisc,
   String? tipDisc,
   String? phoneNumber,
+  String? photoUrlCont1,
+  String? photoUrlCont2,
+  String? photoUrlCont3,
+  String? photoUrlCont4,
+  String? photoUrlCont5,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -166,16 +171,15 @@ Map<String, dynamic> createUsersAuthRecordData({
       'photo_url': photoUrl,
       'uid': uid,
       'created_time': createdTime,
-      'phone1Name': phone1Name,
-      'phone1': phone1,
-      'phone2Name': phone2Name,
-      'phone2': phone2,
-      'phone3Name': phone3Name,
-      'phone3': phone3,
       'birthday': birthday,
       'catDisc': catDisc,
       'tipDisc': tipDisc,
       'phone_number': phoneNumber,
+      'photo_url_Cont1': photoUrlCont1,
+      'photo_url_Cont2': photoUrlCont2,
+      'photo_url_Cont3': photoUrlCont3,
+      'photo_url_Cont4': photoUrlCont4,
+      'photo_url_Cont5': photoUrlCont5,
     }.withoutNulls,
   );
 
@@ -187,21 +191,23 @@ class UsersAuthRecordDocumentEquality implements Equality<UsersAuthRecord> {
 
   @override
   bool equals(UsersAuthRecord? e1, UsersAuthRecord? e2) {
+    const listEquality = ListEquality();
     return e1?.email == e2?.email &&
         e1?.displayName == e2?.displayName &&
         e1?.photoUrl == e2?.photoUrl &&
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
-        e1?.phone1Name == e2?.phone1Name &&
-        e1?.phone1 == e2?.phone1 &&
-        e1?.phone2Name == e2?.phone2Name &&
-        e1?.phone2 == e2?.phone2 &&
-        e1?.phone3Name == e2?.phone3Name &&
-        e1?.phone3 == e2?.phone3 &&
         e1?.birthday == e2?.birthday &&
         e1?.catDisc == e2?.catDisc &&
         e1?.tipDisc == e2?.tipDisc &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.phoneNumber == e2?.phoneNumber &&
+        listEquality.equals(e1?.phoneNames, e2?.phoneNames) &&
+        listEquality.equals(e1?.phones, e2?.phones) &&
+        e1?.photoUrlCont1 == e2?.photoUrlCont1 &&
+        e1?.photoUrlCont2 == e2?.photoUrlCont2 &&
+        e1?.photoUrlCont3 == e2?.photoUrlCont3 &&
+        e1?.photoUrlCont4 == e2?.photoUrlCont4 &&
+        e1?.photoUrlCont5 == e2?.photoUrlCont5;
   }
 
   @override
@@ -211,16 +217,17 @@ class UsersAuthRecordDocumentEquality implements Equality<UsersAuthRecord> {
         e?.photoUrl,
         e?.uid,
         e?.createdTime,
-        e?.phone1Name,
-        e?.phone1,
-        e?.phone2Name,
-        e?.phone2,
-        e?.phone3Name,
-        e?.phone3,
         e?.birthday,
         e?.catDisc,
         e?.tipDisc,
-        e?.phoneNumber
+        e?.phoneNumber,
+        e?.phoneNames,
+        e?.phones,
+        e?.photoUrlCont1,
+        e?.photoUrlCont2,
+        e?.photoUrlCont3,
+        e?.photoUrlCont4,
+        e?.photoUrlCont5
       ]);
 
   @override

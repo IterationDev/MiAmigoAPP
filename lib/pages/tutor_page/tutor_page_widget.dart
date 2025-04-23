@@ -10,22 +10,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'user_page_model.dart';
-export 'user_page_model.dart';
+import 'tutor_page_model.dart';
+export 'tutor_page_model.dart';
 
-class UserPageWidget extends StatefulWidget {
-  const UserPageWidget({super.key});
+class TutorPageWidget extends StatefulWidget {
+  const TutorPageWidget({super.key});
 
-  static String routeName = 'UserPage';
-  static String routePath = '/userPage';
+  static String routeName = 'TutorPage';
+  static String routePath = '/tutorPage';
 
   @override
-  State<UserPageWidget> createState() => _UserPageWidgetState();
+  State<TutorPageWidget> createState() => _TutorPageWidgetState();
 }
 
-class _UserPageWidgetState extends State<UserPageWidget>
+class _TutorPageWidgetState extends State<TutorPageWidget>
     with TickerProviderStateMixin {
-  late UserPageModel _model;
+  late TutorPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -34,7 +34,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => UserPageModel());
+    _model = createModel(context, () => TutorPageModel());
 
     _model.tabBarController = TabController(
       vsync: this,
@@ -257,16 +257,11 @@ class _UserPageWidgetState extends State<UserPageWidget>
             child: Stack(
               alignment: AlignmentDirectional(0.0, -1.0),
               children: [
-                AuthUserStreamWidget(
-                  builder: (context) => Image.network(
-                    valueOrDefault<String>(
-                      currentUserPhoto,
-                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/9667krkp9r0e/CorazonLogo_Transparente.svg',
-                    ),
-                    width: double.infinity,
-                    height: 300.0,
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                  'assets/images/mod1-selfi.jpg',
+                  width: double.infinity,
+                  height: 300.0,
+                  fit: BoxFit.cover,
                 ),
                 Padding(
                   padding:
@@ -502,7 +497,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      '4b0bfl84' /* COMO ME SIENTO */,
+                                      'lqthol7e' /* COMO ME SIENTO */,
                                     ),
                                     icon: Icon(
                                       Icons.quiz_rounded,
@@ -599,7 +594,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                           Tab(
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'dl5x1mwg' /* Contacta */,
+                                              'vk4it5lf' /* Contacta */,
                                             ),
                                             icon: Icon(
                                               Icons.phone,
@@ -609,7 +604,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                           Tab(
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'uksl23gb' /* Juega */,
+                                              'qw73krkc' /* Juega */,
                                             ),
                                             icon: Icon(
                                               Icons.videogame_asset_outlined,
@@ -619,7 +614,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                           Tab(
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              's83mq0d3' /* Descubre */,
+                                              'mgcrtgsg' /* Descubre */,
                                             ),
                                             icon: Icon(
                                               Icons.menu_book_outlined,
@@ -645,266 +640,166 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 24.0),
-                                            child: ListView(
-                                              padding: EdgeInsets.zero,
-                                              scrollDirection: Axis.vertical,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(16.0, 12.0,
-                                                          16.0, 8.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
-                                                      Expanded(
-                                                        child: Column(
+                                            child: AuthUserStreamWidget(
+                                              builder: (context) => Builder(
+                                                builder: (context) {
+                                                  final contacts =
+                                                      (currentUserDocument
+                                                                  ?.phoneNames
+                                                                  .toList() ??
+                                                              [])
+                                                          .toList();
+
+                                                  return ListView.builder(
+                                                    padding: EdgeInsets.zero,
+                                                    scrollDirection:
+                                                        Axis.vertical,
+                                                    itemCount: contacts.length,
+                                                    itemBuilder: (context,
+                                                        contactsIndex) {
+                                                      final contactsItem =
+                                                          contacts[
+                                                              contactsIndex];
+                                                      return Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    16.0,
+                                                                    12.0,
+                                                                    16.0,
+                                                                    8.0),
+                                                        child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
                                                           children: [
+                                                            Expanded(
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            8.0),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '52oom0ll' /*  */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .headlineSmall
+                                                                          .override(
+                                                                            font:
+                                                                                GoogleFonts.poppins(
+                                                                              fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                            ),
+                                                                            fontSize:
+                                                                                30.0,
+                                                                            letterSpacing:
+                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'jvs8drhr' /*  */,
+                                                                    ),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelMedium
+                                                                        .override(
+                                                                          font:
+                                                                              GoogleFonts.roboto(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                          ),
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .fontStyle,
+                                                                        ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
                                                             Padding(
                                                               padding:
                                                                   EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
+                                                                          8.0,
+                                                                          8.0,
                                                                           0.0,
                                                                           8.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'anzs8zt1' /*  */,
-                                                                ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .headlineSmall
-                                                                    .override(
-                                                                      font: GoogleFonts
-                                                                          .poppins(
-                                                                        fontWeight: FlutterFlowTheme.of(context)
-                                                                            .headlineSmall
-                                                                            .fontWeight,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .headlineSmall
-                                                                            .fontStyle,
-                                                                      ),
-                                                                      fontSize:
-                                                                          30.0,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .headlineSmall
-                                                                          .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .headlineSmall
-                                                                          .fontStyle,
-                                                                    ),
-                                                              ),
-                                                            ),
-                                                            Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'two9l6zn' /*  */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    font: GoogleFonts
-                                                                        .roboto(
-                                                                      fontWeight: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .labelMedium
-                                                                          .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .labelMedium
-                                                                          .fontStyle,
-                                                                    ),
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    fontWeight: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelMedium
-                                                                        .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelMedium
-                                                                        .fontStyle,
+                                                              child: InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await launchUrl(
+                                                                      Uri(
+                                                                    scheme:
+                                                                        'tel',
+                                                                    path: '',
+                                                                  ));
+                                                                },
+                                                                child:
+                                                                    ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              12.0),
+                                                                  child: Image
+                                                                      .network(
+                                                                    'https://images.unsplash.com/photo-1564156280315-1d42b4651629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMnx8ZGFkfGVufDB8fHx8MTc0MzIxODY5N3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                                                                    width:
+                                                                        100.0,
+                                                                    height:
+                                                                        100.0,
+                                                                    fit: BoxFit
+                                                                        .cover,
                                                                   ),
+                                                                ),
+                                                              ),
                                                             ),
                                                           ],
                                                         ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    8.0,
-                                                                    8.0,
-                                                                    0.0,
-                                                                    8.0),
-                                                        child: InkWell(
-                                                          splashColor: Colors
-                                                              .transparent,
-                                                          focusColor: Colors
-                                                              .transparent,
-                                                          hoverColor: Colors
-                                                              .transparent,
-                                                          highlightColor: Colors
-                                                              .transparent,
-                                                          onTap: () async {
-                                                            await launchUrl(Uri(
-                                                              scheme: 'tel',
-                                                              path: '',
-                                                            ));
-                                                          },
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        12.0),
-                                                            child:
-                                                                Image.network(
-                                                              'https://images.unsplash.com/photo-1564156280315-1d42b4651629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMnx8ZGFkfGVufDB8fHx8MTc0MzIxODY5N3ww&ixlib=rb-4.0.3&q=80&w=1080',
-                                                              width: 100.0,
-                                                              height: 100.0,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          16.0, 0.0, 16.0, 8.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment.end,
-                                                    children: [
-                                                      Expanded(
-                                                        child: Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.0, 0.0),
-                                                          child: FFButtonWidget(
-                                                            onPressed:
-                                                                () async {
-                                                              if (Navigator.of(
-                                                                      context)
-                                                                  .canPop()) {
-                                                                context.pop();
-                                                              }
-                                                              context.pushNamed(
-                                                                AddPhoneWidget
-                                                                    .routeName,
-                                                                extra: <String,
-                                                                    dynamic>{
-                                                                  kTransitionInfoKey:
-                                                                      TransitionInfo(
-                                                                    hasTransition:
-                                                                        true,
-                                                                    transitionType:
-                                                                        PageTransitionType
-                                                                            .bottomToTop,
-                                                                  ),
-                                                                },
-                                                              );
-                                                            },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'wvf2oiup' /* Añadir otro... */,
-                                                            ),
-                                                            icon: Icon(
-                                                              Icons.add_call,
-                                                              size: 30.0,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              width: MediaQuery
-                                                                          .sizeOf(
-                                                                              context)
-                                                                      .width *
-                                                                  0.6,
-                                                              height: 40.0,
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          16.0,
-                                                                          0.0,
-                                                                          16.0,
-                                                                          0.0),
-                                                              iconPadding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              color: Color(
-                                                                  0xFFA0C3D9),
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall
-                                                                      .override(
-                                                                        font: GoogleFonts
-                                                                            .poppins(
-                                                                          fontWeight: FlutterFlowTheme.of(context)
-                                                                              .titleSmall
-                                                                              .fontWeight,
-                                                                          fontStyle: FlutterFlowTheme.of(context)
-                                                                              .titleSmall
-                                                                              .fontStyle,
-                                                                        ),
-                                                                        color: Colors
-                                                                            .white,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight: FlutterFlowTheme.of(context)
-                                                                            .titleSmall
-                                                                            .fontWeight,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .titleSmall
-                                                                            .fontStyle,
-                                                                      ),
-                                                              elevation: 4.0,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          8.0),
-                                                              hoverColor:
-                                                                  Colors.white,
-                                                              hoverTextColor:
-                                                                  Color(
-                                                                      0xFFA0C3D9),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
+                                                      );
+                                                    },
+                                                  );
+                                                },
+                                              ),
                                             ),
                                           ),
                                           Padding(
@@ -986,7 +881,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                'cwajhnp3' /* BUSCA TU JUEGO FAVORITO... */,
+                                                                'f6kohaea' /* BUSCA TU JUEGO FAVORITO... */,
                                                               ),
                                                               hintStyle:
                                                                   FlutterFlowTheme.of(
@@ -1147,7 +1042,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '20zgjmjn' /*  */,
+                                                          'hc1zvvex' /*  */,
                                                         ),
                                                         icon: Icon(
                                                           Icons.search_rounded,
@@ -1246,7 +1141,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'xaahiy9w' /* DIFICULTAD: */,
+                                                                    'ezy245pv' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1284,7 +1179,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'qb5up978' /* Hello World */,
+                                                                      '7zpw2hqn' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1324,7 +1219,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'msuiq8hu' /* NAME GAME1 */,
+                                                                  'ymvrlmqh' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1358,7 +1253,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '2qwuvpza' /* 50% */,
+                                                                'l3fhfn8a' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1446,7 +1341,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'vhrrzybg' /* DIFICULTAD: */,
+                                                                    'n1etz2tw' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1484,7 +1379,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'uttuf2kl' /* Hello World */,
+                                                                      '516cpuzy' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1524,7 +1419,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'dbxgksh6' /* NAME GAME1 */,
+                                                                  'o4uycfv3' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1558,7 +1453,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '81nnolue' /* 50% */,
+                                                                '5leax250' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1646,7 +1541,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'z66eaavo' /* DIFICULTAD: */,
+                                                                    '0gazqzul' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1684,7 +1579,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'gawyi2ya' /* Hello World */,
+                                                                      'vodo0l85' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1724,7 +1619,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'l5cdl3gk' /* NAME GAME1 */,
+                                                                  '0a5ysmnd' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1758,7 +1653,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '6unw8158' /* 50% */,
+                                                                'xid29moe' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1846,7 +1741,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'py3hp22s' /* DIFICULTAD: */,
+                                                                    'lds9v1su' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1884,7 +1779,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '8kk6mued' /* Hello World */,
+                                                                      'l1uifeji' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1924,7 +1819,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'v8ta5uxu' /* NAME GAME1 */,
+                                                                  '37w43jxb' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1958,7 +1853,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                't5rwzpzg' /* 50% */,
+                                                                '5yalmo3k' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2046,7 +1941,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'pm5jcbdl' /* DIFICULTAD: */,
+                                                                    'igncfqqy' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -2084,7 +1979,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'g3fhkbm9' /* Hello World */,
+                                                                      'bjbvpowl' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -2124,7 +2019,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'jf6grzrz' /* NAME GAME1 */,
+                                                                  'd8f9cmiz' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -2158,7 +2053,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'eh23gczt' /* 50% */,
+                                                                'tdbml25l' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2246,7 +2141,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'yztw6bo2' /* DIFICULTAD: */,
+                                                                    '7v2288ua' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -2284,7 +2179,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '2ncded7q' /* Hello World */,
+                                                                      'j7se5bng' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -2324,7 +2219,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '0lz47p9r' /* NAME GAME1 */,
+                                                                  'vexibm06' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -2358,7 +2253,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'enbwwrx2' /* 50% */,
+                                                                '948ko8gd' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2446,7 +2341,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'ezu9v4kr' /* DIFICULTAD: */,
+                                                                    'vzxptqdt' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -2484,7 +2379,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'tdvt763p' /* Hello World */,
+                                                                      'w5dxanm7' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -2524,7 +2419,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'n6himrgf' /* NAME GAME1 */,
+                                                                  '1ktz0cml' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -2558,7 +2453,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'erzfxl1q' /* 50% */,
+                                                                'v45y6oz6' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2646,7 +2541,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'l56rfzcg' /* DIFICULTAD: */,
+                                                                    'rpn19k43' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -2684,7 +2579,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'z7v4xymp' /* Hello World */,
+                                                                      'dxqj7mez' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -2724,7 +2619,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'w29a8d79' /* NAME GAME1 */,
+                                                                  'hz4jbpjw' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -2758,7 +2653,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'q7i9cg2n' /* 50% */,
+                                                                '5dy0sc9w' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -2846,7 +2741,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'vd8xpdt2' /* DIFICULTAD: */,
+                                                                    '5sb1wors' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -2884,7 +2779,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'n15otxro' /* Hello World */,
+                                                                      'tumyh8tv' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -2924,7 +2819,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'jdeiq81o' /* NAME GAME1 */,
+                                                                  '61a8zldm' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -2958,7 +2853,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'x1wc2ckk' /* 50% */,
+                                                                'knbsxxw0' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -3046,7 +2941,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'xks8sqzm' /* DIFICULTAD: */,
+                                                                    'fhq4yk09' /* DIFICULTAD: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -3084,7 +2979,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'z168mf9n' /* Hello World */,
+                                                                      '9u557fmu' /* Hello World */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -3124,7 +3019,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '1e6cn5pm' /* NAME GAME1 */,
+                                                                  'nqa2ni07' /* NAME GAME1 */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -3158,7 +3053,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'e4rf1d7k' /* 50% */,
+                                                                '07d9q0tm' /* 50% */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -3302,7 +3197,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                '1c4ssnyx' /* QUE QUIERES LEER HOY... */,
+                                                                'e62sh86y' /* QUE QUIERES LEER HOY... */,
                                                               ),
                                                               hintStyle:
                                                                   FlutterFlowTheme.of(
@@ -3463,7 +3358,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'z1d7pcy9' /*  */,
+                                                          'ui61usov' /*  */,
                                                         ),
                                                         icon: Icon(
                                                           Icons.search_rounded,
@@ -3629,7 +3524,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'nfhij7z4' /* El trenecito que si pudo. */,
+                                                                      'pvy39s4q' /* El trenecito que si pudo. */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -3684,7 +3579,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              't33gktjd' /* By Ellen Fraud */,
+                                                                              'xupjxepp' /* By Ellen Fraud */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -3731,7 +3626,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'on0ohvi5' /* 5 min  */,
+                                                                              '2amposmu' /* 5 min  */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -3778,7 +3673,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              '0dpw0w9z' /* Narración Disponible */,
+                                                                              '1zg0yc8n' /* Narración Disponible */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -3901,7 +3796,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'bvn9wc43' /* El trenecito que si pudo. */,
+                                                                      'lf0mywrd' /* El trenecito que si pudo. */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -3956,7 +3851,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'im85b2km' /* By Ellen Fraud */,
+                                                                              'v935n4ot' /* By Ellen Fraud */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4003,7 +3898,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'izdc331g' /* 5 min  */,
+                                                                              'rcyrn9tc' /* 5 min  */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4050,7 +3945,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'z6g659x7' /* Narración Disponible */,
+                                                                              'sk262wve' /* Narración Disponible */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4173,7 +4068,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'mlsrg50u' /* El trenecito que si pudo. */,
+                                                                      'fmumzmb0' /* El trenecito que si pudo. */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -4228,7 +4123,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'xknwe5ce' /* By Ellen Fraud */,
+                                                                              'x63aorxa' /* By Ellen Fraud */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4275,7 +4170,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'ef2rzswy' /* 5 min  */,
+                                                                              'f2jnw2ev' /* 5 min  */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4322,7 +4217,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'm6hvy8ec' /* Narración Disponible */,
+                                                                              'dl1vr2mi' /* Narración Disponible */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4445,7 +4340,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'othtifpc' /* El trenecito que si pudo. */,
+                                                                      'dfvhv60v' /* El trenecito que si pudo. */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -4500,7 +4395,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'mhyv0naa' /* By Ellen Fraud */,
+                                                                              'k2h1f689' /* By Ellen Fraud */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4547,7 +4442,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'xldfa4et' /* 5 min  */,
+                                                                              'zsynh49z' /* 5 min  */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4594,7 +4489,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'vhxnnp90' /* Narración Disponible */,
+                                                                              'ajumpopc' /* Narración Disponible */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4717,7 +4612,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'd137teux' /* El trenecito que si pudo. */,
+                                                                      'ua5zrxds' /* El trenecito que si pudo. */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -4772,7 +4667,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              '9ns37sa0' /* By Ellen Fraud */,
+                                                                              '67p3hayz' /* By Ellen Fraud */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4819,7 +4714,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              '9b9ytopb' /* 5 min  */,
+                                                                              'hcmkbilf' /* 5 min  */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
@@ -4866,7 +4761,7 @@ class _UserPageWidgetState extends State<UserPageWidget>
                                                                           child:
                                                                               Text(
                                                                             FFLocalizations.of(context).getText(
-                                                                              'e452737q' /* Narración Disponible */,
+                                                                              'ogt7vqs9' /* Narración Disponible */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                   font: GoogleFonts.poppins(
