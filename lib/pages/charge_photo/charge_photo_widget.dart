@@ -192,21 +192,19 @@ class _ChargePhotoWidgetState extends State<ChargePhotoWidget> {
                                     ),
                                     Padding(
                                       padding: EdgeInsets.all(4.0),
-                                      child: AuthUserStreamWidget(
-                                        builder: (context) => Container(
-                                          width: 120.0,
-                                          height: 120.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
+                                      child: Container(
+                                        width: 120.0,
+                                        height: 120.0,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.network(
+                                          valueOrDefault<String>(
+                                            currentUserPhoto,
+                                            'https://images.unsplash.com/photo-1511367461989-f85a21fda167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxwcm9maWxlfGVufDB8fHx8MTc0NTI5MDU0NHww&ixlib=rb-4.0.3&q=80&w=1080==',
                                           ),
-                                          child: Image.network(
-                                            valueOrDefault<String>(
-                                              currentUserPhoto,
-                                              'https://images.unsplash.com/photo-1511367461989-f85a21fda167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxwcm9maWxlfGVufDB8fHx8MTc0NTI5MDU0NHww&ixlib=rb-4.0.3&q=80&w=1080==',
-                                            ),
-                                            fit: BoxFit.cover,
-                                          ),
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),

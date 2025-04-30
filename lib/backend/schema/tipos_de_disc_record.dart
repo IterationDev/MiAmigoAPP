@@ -15,13 +15,13 @@ class TiposDeDiscRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "categoria" field.
-  String? _categoria;
-  String get categoria => _categoria ?? '';
-  bool hasCategoria() => _categoria != null;
+  // "Tipo" field.
+  List<String>? _tipo;
+  List<String> get tipo => _tipo ?? const [];
+  bool hasTipo() => _tipo != null;
 
   void _initializeFields() {
-    _categoria = snapshotData['categoria'] as String?;
+    _tipo = getDataList(snapshotData['Tipo']);
   }
 
   static CollectionReference get collection =>
@@ -58,13 +58,9 @@ class TiposDeDiscRecord extends FirestoreRecord {
       reference.path.hashCode == other.reference.path.hashCode;
 }
 
-Map<String, dynamic> createTiposDeDiscRecordData({
-  String? categoria,
-}) {
+Map<String, dynamic> createTiposDeDiscRecordData() {
   final firestoreData = mapToFirestore(
-    <String, dynamic>{
-      'categoria': categoria,
-    }.withoutNulls,
+    <String, dynamic>{}.withoutNulls,
   );
 
   return firestoreData;
@@ -75,11 +71,12 @@ class TiposDeDiscRecordDocumentEquality implements Equality<TiposDeDiscRecord> {
 
   @override
   bool equals(TiposDeDiscRecord? e1, TiposDeDiscRecord? e2) {
-    return e1?.categoria == e2?.categoria;
+    const listEquality = ListEquality();
+    return listEquality.equals(e1?.tipo, e2?.tipo);
   }
 
   @override
-  int hash(TiposDeDiscRecord? e) => const ListEquality().hash([e?.categoria]);
+  int hash(TiposDeDiscRecord? e) => const ListEquality().hash([e?.tipo]);
 
   @override
   bool isValidKey(Object? o) => o is TiposDeDiscRecord;

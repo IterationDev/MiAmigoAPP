@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -94,7 +93,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: UserPageWidget.routeName,
           path: UserPageWidget.routePath,
-          builder: (context, params) => UserPageWidget(),
+          builder: (context, params) => UserPageWidget(
+            userRef: params.getParam(
+              'userRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['usersAuth'],
+            ),
+          ),
         ),
         FFRoute(
           name: TutorialPageWidget.routeName,
@@ -122,6 +128,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OnboardingPageWidget(),
         ),
         FFRoute(
+          name: UserPhotosPageWidget.routeName,
+          path: UserPhotosPageWidget.routePath,
+          asyncParams: {
+            'datMail': getDoc(['usersAuth'], UsersAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => UserPhotosPageWidget(
+            userRef: params.getParam(
+              'userRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['usersAuth'],
+            ),
+            datMail: params.getParam(
+              'datMail',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
           name: CreateAccountPageWidget.routeName,
           path: CreateAccountPageWidget.routePath,
           builder: (context, params) => CreateAccountPageWidget(),
@@ -129,12 +154,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: TutorPageWidget.routeName,
           path: TutorPageWidget.routePath,
-          builder: (context, params) => TutorPageWidget(),
+          builder: (context, params) => TutorPageWidget(
+            tutorRef: params.getParam(
+              'tutorRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['tutorsAuth'],
+            ),
+          ),
         ),
         FFRoute(
-          name: CreateAccountPhotosPageWidget.routeName,
-          path: CreateAccountPhotosPageWidget.routePath,
-          builder: (context, params) => CreateAccountPhotosPageWidget(),
+          name: TutorsPhotosPageWidget.routeName,
+          path: TutorsPhotosPageWidget.routePath,
+          asyncParams: {
+            'datMailTut': getDoc(['tutorsAuth'], TutorsAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => TutorsPhotosPageWidget(
+            tutorRef: params.getParam(
+              'tutorRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['tutorsAuth'],
+            ),
+            datMailTut: params.getParam(
+              'datMailTut',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

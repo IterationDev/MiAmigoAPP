@@ -353,11 +353,11 @@ Ingresa a... */
                         padding:
                             EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
                         child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(HomePageWidget.routeName);
+                          onPressed: () {
+                            print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
-                            'a7i4lhqy' /* MIS CUENTAS */,
+                            'a7i4lhqy' /* INICIA SESION */,
                           ),
                           options: FFButtonOptions(
                             width: 230.0,

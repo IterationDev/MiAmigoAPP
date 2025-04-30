@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'fondo_model.dart';
 export 'fondo_model.dart';
 
+/// Componente para fondos en la app
 class FondoWidget extends StatefulWidget {
   const FondoWidget({super.key});
 

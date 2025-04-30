@@ -7,8 +7,10 @@ export '/pages/add_phone/add_phone_widget.dart' show AddPhoneWidget;
 export '/pages/setting_page/setting_page_widget.dart' show SettingPageWidget;
 export '/pages/onboarding_page/onboarding_page_widget.dart'
     show OnboardingPageWidget;
+export '/pages/user_photos_page/user_photos_page_widget.dart'
+    show UserPhotosPageWidget;
 export '/pages/create_account_page/create_account_page_widget.dart'
     show CreateAccountPageWidget;
 export '/pages/tutor_page/tutor_page_widget.dart' show TutorPageWidget;
-export '/pages/create_account_photos_page/create_account_photos_page_widget.dart'
-    show CreateAccountPhotosPageWidget;
+export '/pages/tutors_photos_page/tutors_photos_page_widget.dart'
+    show TutorsPhotosPageWidget;

@@ -1,6 +1,6 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -8,7 +8,17 @@ import 'users_tag_model.dart';
 export 'users_tag_model.dart';
 
 class UsersTagWidget extends StatefulWidget {
-  const UsersTagWidget({super.key});
+  const UsersTagWidget({
+    super.key,
+    String? img,
+    this.refSesionUser,
+    this.name,
+  }) : this.img = img ??
+            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/m4bakgiqppj6/userDefault.svg';
+
+  final String img;
+  final DocumentReference? refSesionUser;
+  final String? name;
 
   @override
   State<UsersTagWidget> createState() => _UsersTagWidgetState();
@@ -66,34 +76,44 @@ class _UsersTagWidgetState extends State<UsersTagWidget>
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
-      child: AuthUserStreamWidget(
-        builder: (context) => InkWell(
-          splashColor: Colors.transparent,
-          focusColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () async {
-            context.pushNamed(UserPageWidget.routeName);
-          },
-          child: Container(
-            width: 200.0,
-            height: 200.0,
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-            ),
-            child: Image.network(
-              valueOrDefault<String>(
-                currentUserPhoto,
-                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/m4bakgiqppj6/userDefault.svg',
+      child: InkWell(
+        splashColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        onTap: () async {
+          context.pushNamed(
+            UserPageWidget.routeName,
+            queryParameters: {
+              'userRef': serializeParam(
+                widget.refSesionUser,
+                ParamType.DocumentReference,
               ),
-              fit: BoxFit.cover,
+            }.withoutNulls,
+          );
+        },
+        child: Container(
+          width: 200.0,
+          height: 200.0,
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+          ),
+          child: Image.network(
+            valueOrDefault<String>(
+              widget.img,
+              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/m4bakgiqppj6/userDefault.svg',
             ),
+            fit: BoxFit.cover,
           ),
         ),
       ),
       onEnter: ((event) async {
         safeSetState(() => _model.mouseRegionHovered = true);
+        await actions.textToVoice(
+          widget.name,
+          '',
+        );
         if (animationsMap['mouseRegionOnActionTriggerAnimation'] != null) {
           await animationsMap['mouseRegionOnActionTriggerAnimation']!
               .controller

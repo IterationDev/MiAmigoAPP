@@ -1,11 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
-import 'create_account_photos_page_widget.dart'
-    show CreateAccountPhotosPageWidget;
+import 'user_photos_page_widget.dart' show UserPhotosPageWidget;
 import 'package:flutter/material.dart';
 
-class CreateAccountPhotosPageModel
-    extends FlutterFlowModel<CreateAccountPhotosPageWidget> {
+class UserPhotosPageModel extends FlutterFlowModel<UserPhotosPageWidget> {
   ///  Local state fields for this page.
 
   String? photos;
