@@ -6,6 +6,7 @@ import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 import '/index.dart';
@@ -105,7 +106,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: TutorialPageWidget.routeName,
           path: TutorialPageWidget.routePath,
-          builder: (context, params) => TutorialPageWidget(),
+          asyncParams: {
+            'data': getDoc(['usersAuth'], UsersAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => TutorialPageWidget(
+            data: params.getParam(
+              'data',
+              ParamType.Document,
+            ),
+          ),
         ),
         FFRoute(
           name: FeelingPageWidget.routeName,
@@ -113,9 +122,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => FeelingPageWidget(),
         ),
         FFRoute(
-          name: AddPhoneWidget.routeName,
-          path: AddPhoneWidget.routePath,
-          builder: (context, params) => AddPhoneWidget(),
+          name: AddPhonePageWidget.routeName,
+          path: AddPhonePageWidget.routePath,
+          asyncParams: {
+            'data': getDoc(['usersAuth'], UsersAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => AddPhonePageWidget(
+            data: params.getParam(
+              'data',
+              ParamType.Document,
+            ),
+          ),
         ),
         FFRoute(
           name: SettingPageWidget.routeName,
@@ -368,7 +385,7 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).common4,
                   child: Image.asset(
                     'assets/images/LogoCompleto.svg',
                     fit: BoxFit.contain,

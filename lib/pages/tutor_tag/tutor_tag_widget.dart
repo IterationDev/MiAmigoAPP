@@ -10,6 +10,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'tutor_tag_model.dart';
 export 'tutor_tag_model.dart';
 
+/// Al 02/5 se tiene lo necesario para la interfaz, aun hace falta ver que se
+/// agrega pero funciona como debe el componente
 class TutorTagWidget extends StatefulWidget {
   const TutorTagWidget({
     super.key,

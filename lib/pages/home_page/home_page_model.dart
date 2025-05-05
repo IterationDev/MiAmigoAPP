@@ -15,6 +15,10 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   late FlutterFlowDynamicModels<UsersTagModel> usersTagModels;
   // Models for TutorTag dynamic component.
   late FlutterFlowDynamicModels<TutorTagModel> tutorTagModels;
+  // State field(s) for MouseRegion widget.
+  bool mouseRegionHovered1 = false;
+  // State field(s) for MouseRegion widget.
+  bool mouseRegionHovered2 = false;
 
   @override
   void initState(BuildContext context) {

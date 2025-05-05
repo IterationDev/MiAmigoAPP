@@ -6,10 +6,11 @@ import 'package:flutter/material.dart';
 class TutorialPageModel extends FlutterFlowModel<TutorialPageWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for tutorialSearch widget.
+  FocusNode? tutorialSearchFocusNode;
+  TextEditingController? tutorialSearchTextController;
+  String? Function(BuildContext, String?)?
+      tutorialSearchTextControllerValidator;
   // State field(s) for ChoiceChips widget.
   FormFieldController<List<String>>? choiceChipsValueController;
   String? get choiceChipsValue =>
@@ -22,7 +23,7 @@ class TutorialPageModel extends FlutterFlowModel<TutorialPageWidget> {
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    tutorialSearchFocusNode?.dispose();
+    tutorialSearchTextController?.dispose();
   }
 }

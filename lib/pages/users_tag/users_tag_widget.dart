@@ -7,6 +7,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'users_tag_model.dart';
 export 'users_tag_model.dart';
 
+/// Al 02/5 se tiene lo necesario para la interfaz, aun hace falta ver que se
+/// agrega pero funciona como debe el componente
 class UsersTagWidget extends StatefulWidget {
   const UsersTagWidget({
     super.key,

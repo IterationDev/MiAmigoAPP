@@ -11,6 +11,10 @@ import 'schema/cat_g2_record.dart';
 import 'schema/cat_g3_record.dart';
 import 'schema/cat_g4_record.dart';
 import 'schema/tutors_auth_record.dart';
+import 'schema/sentimientos_negativos_record.dart';
+import 'schema/sintomas_record.dart';
+import 'schema/sentimientos_positivos_record.dart';
+import 'schema/sentimientos_neutros_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -28,6 +32,10 @@ export 'schema/cat_g2_record.dart';
 export 'schema/cat_g3_record.dart';
 export 'schema/cat_g4_record.dart';
 export 'schema/tutors_auth_record.dart';
+export 'schema/sentimientos_negativos_record.dart';
+export 'schema/sintomas_record.dart';
+export 'schema/sentimientos_positivos_record.dart';
+export 'schema/sentimientos_neutros_record.dart';
 
 /// Functions to query TiposDeDiscRecords (as a Stream and as a Future).
 Future<int> queryTiposDeDiscRecordCount({
@@ -360,6 +368,154 @@ Future<List<TutorsAuthRecord>> queryTutorsAuthRecordOnce({
     queryCollectionOnce(
       TutorsAuthRecord.collection,
       TutorsAuthRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query SentimientosNegativosRecords (as a Stream and as a Future).
+Future<int> querySentimientosNegativosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      SentimientosNegativosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<SentimientosNegativosRecord>> querySentimientosNegativosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SentimientosNegativosRecord.collection,
+      SentimientosNegativosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SentimientosNegativosRecord>> querySentimientosNegativosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SentimientosNegativosRecord.collection,
+      SentimientosNegativosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query SintomasRecords (as a Stream and as a Future).
+Future<int> querySintomasRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      SintomasRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<SintomasRecord>> querySintomasRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SintomasRecord.collection,
+      SintomasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SintomasRecord>> querySintomasRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SintomasRecord.collection,
+      SintomasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query SentimientosPositivosRecords (as a Stream and as a Future).
+Future<int> querySentimientosPositivosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      SentimientosPositivosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<SentimientosPositivosRecord>> querySentimientosPositivosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SentimientosPositivosRecord.collection,
+      SentimientosPositivosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SentimientosPositivosRecord>> querySentimientosPositivosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SentimientosPositivosRecord.collection,
+      SentimientosPositivosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query SentimientosNeutrosRecords (as a Stream and as a Future).
+Future<int> querySentimientosNeutrosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      SentimientosNeutrosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<SentimientosNeutrosRecord>> querySentimientosNeutrosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SentimientosNeutrosRecord.collection,
+      SentimientosNeutrosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SentimientosNeutrosRecord>> querySentimientosNeutrosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SentimientosNeutrosRecord.collection,
+      SentimientosNeutrosRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

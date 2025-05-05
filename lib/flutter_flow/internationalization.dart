@@ -152,11 +152,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'l87em861': {
-      'es': 'VERSION 1.0',
-      'en': '',
-      'fr': '',
-    },
     '94swjsyg': {
       'es': 'Home',
       'en': '',
@@ -172,16 +167,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dl5x1mwg': {
       'es': 'Contacta',
-      'en': '',
-      'fr': '',
-    },
-    'anzs8zt1': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'two9l6zn': {
-      'es': '',
       'en': '',
       'fr': '',
     },
@@ -528,162 +513,63 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // TutorialPage
   {
-    '6kyjckyy': {
-      'es': 'Hey Jenny',
+    'obd7echj': {
+      'es': 'Tu Tutor tiene algo que enseñarte, aprende con sus tutoriales...',
       'en': '',
       'fr': '',
     },
-    '52hgf0x0': {
-      'es': 'Stay up to date with the latest news below.',
+    'nylpu3ek': {
+      'es': 'Busca lo que quieras aprender...',
       'en': '',
       'fr': '',
     },
-    'krl17icg': {
-      'es': 'Search all articles...',
+    'qa88r9mp': {
+      'es': 'Tareas Del Hogar',
       'en': '',
       'fr': '',
     },
-    '9ma4is5w': {
-      'es': 'For You',
+    '3kd5m10t': {
+      'es': 'Actividades Diarias',
       'en': '',
       'fr': '',
     },
-    'bjkgb7cm': {
-      'es': 'Sci-Fi',
+    'j1y87ry5': {
+      'es': 'Actividades Especificas',
       'en': '',
       'fr': '',
     },
-    'yba6zo69': {
-      'es': 'Fiction',
+    'jg6fv4pz': {
+      'es': 'Recordatorios',
       'en': '',
       'fr': '',
     },
-    'lq023yjr': {
-      'es': 'Technology',
+    'oojrhp1u': {
+      'es': 'Otros',
       'en': '',
       'fr': '',
     },
-    'ov7gppxi': {
-      'es': 'Ai News',
+    '5ano4hmy': {
+      'es': 'Tareas Del Hogar',
       'en': '',
       'fr': '',
     },
-    '4s3myeju': {
-      'es': 'Startups',
+    'vlqywuiu': {
+      'es': 'Titulo del Tutorial',
       'en': '',
       'fr': '',
     },
-    'wbice8oo': {
-      'es': 'For You',
+    'qt8yaoes': {
+      'es': 'Tipo:',
       'en': '',
       'fr': '',
     },
-    's8fjv7oq': {
-      'es': 'Popular Today',
+    'eyplfprw': {
+      'es': 'AREA',
       'en': '',
       'fr': '',
     },
-    'p4czr4e4': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-      'fr': '',
-    },
-    'eb7dhrsc': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-      'fr': '',
-    },
-    'f3t9ci26': {
-      'es': '24',
-      'en': '',
-      'fr': '',
-    },
-    'xwzruw8p': {
-      'es': '12h',
-      'en': '',
-      'fr': '',
-    },
-    'k3hk6fnn': {
-      'es': 'Read Now',
-      'en': '',
-      'fr': '',
-    },
-    'juf0c058': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-      'fr': '',
-    },
-    'nvzpr9ht': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-      'fr': '',
-    },
-    '3xlvmdut': {
-      'es': '24',
-      'en': '',
-      'fr': '',
-    },
-    'm6mha4q6': {
-      'es': '12h',
-      'en': '',
-      'fr': '',
-    },
-    '9mom4y6x': {
-      'es': 'Read Now',
-      'en': '',
-      'fr': '',
-    },
-    'rd8umn20': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-      'fr': '',
-    },
-    'czbkbyzt': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-      'fr': '',
-    },
-    'mis64stj': {
-      'es': '24',
-      'en': '',
-      'fr': '',
-    },
-    '36s21byx': {
-      'es': '12h',
-      'en': '',
-      'fr': '',
-    },
-    '1hcupp05': {
-      'es': 'Read Now',
-      'en': '',
-      'fr': '',
-    },
-    'xzwwatrj': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-      'fr': '',
-    },
-    'n9z3105l': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-      'fr': '',
-    },
-    'lzt5ho5k': {
-      'es': '24',
-      'en': '',
-      'fr': '',
-    },
-    '80ygyda2': {
-      'es': '12h',
-      'en': '',
-      'fr': '',
-    },
-    'xqrjrt64': {
-      'es': 'Read Now',
+    'ylxpnj3h': {
+      'es': 'Duracion',
       'en': '',
       'fr': '',
     },
@@ -701,362 +587,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     'foq2u8xx': {
-      'es': 'Como te sientes hoy...',
+      'es': 'Qué sientes hoy...',
       'en': '',
       'fr': '',
     },
     'iglowpea': {
-      'es': 'SINTOMAS',
-      'en': '',
-      'fr': '',
-    },
-    'xcp3xgmu': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'p4858vhp': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'qvdpqs74': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ggh88gkt': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'b8k72vbe': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ixodx29j': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '9b8uplnb': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'ykka1eyy': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '40sp9v2z': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'tvsmica2': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'q76jyml6': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '1uwysfvj': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '7wsfxl1g': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'wo5zmxh8': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'qv97ybj7': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'c18ggxpg': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'u9pk84w2': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '0wue2hu4': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'oay1xjop': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'qnfjfmbz': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '5gb5zwka': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'xo34jvbd': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'zn0pxclr': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'u7vw1v7w': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'm6zfujr4': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'qoqtnu6i': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'y4gxfcz9': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'btlc8brf': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'rfwmtmc9': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '8ign61ly': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'p7np4i9d': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '8qe7xh25': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'tfcmkgsh': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'hgwr1j3w': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'dwrft6bk': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'pkvpzxg1': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'qwcr0bhs': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'n5d12sc2': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '05hhrs60': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'scwwxbtb': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '3ekuswyh': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'oz8kapfs': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'bmmhaayy': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'ciz4hlz3': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'amzq2yni': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '9o03vsk9': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'loslv3et': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'dndteg6o': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'anpezm5f': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'lj9dy7cr': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'yxw19ooi': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '5ddd8dz3': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zwt59nef': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '4if32fov': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'qormo21h': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'tc8timio': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '2cqhzks6': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'y4fvc0eq': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'z76rcuu9': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '4vkzt58q': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'm0ge6yib': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'y97j0o4p': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'bvvg7cp4': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'k1nl1b2y': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'mw96e7g9': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'yp82l6a1': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ovxmjd6u': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '7gewr97k': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'd8pab5ve': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '556iqox3': {
-      'es': '',
+      'es': 'TODOS',
       'en': '',
       'fr': '',
     },
@@ -1065,708 +601,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'uq9ou9j9': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'zgpqx79l': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'yftlp2ty': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '18m1wikr': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'i3r72ma7': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'b0557jzc': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'yec43cxm': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'fy2jayn6': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'b1ghacny': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'q6ck4kbx': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zn1les2p': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'xj7j4tep': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zntlxbrq': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '7ir102qm': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'ljwlm4t1': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'bwe64x5j': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '367at0da': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zk14sw18': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '3ulucb3m': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '8tzq4pfi': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '8awh7bl0': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'mux3ati5': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'bckb2ccp': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '12wbdj7y': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '7ootidfj': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    't5ehlv4d': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '4kpcer17': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'dyxrny8v': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '42aghta4': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'nwl5cux1': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'z9q25id5': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'd0kbgecx': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'lrcgcyp5': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ketzg534': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '5nvfhuf6': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'y7gso7vd': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'x9z8jwap': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'aht0lnaj': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zp5lehw8': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'k1xziy11': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'qgggala2': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '9oucqhqa': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'rd8dvl6x': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'b00b8ekk': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'yy9fx8cb': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'od98r0nm': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'n5j9ywpq': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'clgyoiwg': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'h7b9w7a8': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'd3681u2y': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'hknoav8p': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'zveae1f3': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'l8d6hfwc': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'xfzaa1a7': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'uuails3o': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'lxt53zq9': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'bhsusfq0': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'lt3alpqr': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '2enc4m8t': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'vbpzk4ea': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '6h7rxzj4': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'x83l5qy2': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '3tsao7me': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '59r6gflt': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'yrc3v3zv': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'lperj9xv': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'lipq1rad': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'rdotxf3m': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ohe3oiiu': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'h0q99vxf': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
     '03rozgll': {
       'es': 'POSITIVOS',
-      'en': '',
-      'fr': '',
-    },
-    '7ou14wxu': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'ezh4qe90': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'o1at6t5u': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'fdwas6uc': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'h1qc3z47': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'wme5e2bo': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '1cc5m2os': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '864salrl': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'o086wq3c': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '12y9r4w1': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'axn1d2s3': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '78hz75g2': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'kifqaota': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'gos4wp2e': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'tdxc9op6': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'tuc58r8s': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'tn7ael0c': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ompnq797': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '0kfc3vgm': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'a4h3txcq': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '78x0g7vi': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'w7jt1yiu': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'lmf07ret': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'dixsvdlv': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '5bogu5jc': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'je756mn2': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'loz3v8e6': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'g8zaxwhf': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'o9on0k4h': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'lr1a21ea': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'isaj6fn4': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '9a1zsf3y': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '13dgk9gy': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'r8pejq5t': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'c15rj8nj': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'o9hqjg6d': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '2p8m1f6z': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'tck542x3': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '7m2ebfwk': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'lwk1xdam': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'x9xzyxea': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'lwogosqk': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'h4xwmqvw': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '14f5onh5': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'kbvhwngp': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'z6otvyro': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '2etijcuo': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'b9n45qq2': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'bibcp10t': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'x1yu0pgb': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '9q5m7vxf': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '0i6qu0pm': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '933rv88x': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '5emylqrn': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'f06p16vl': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'dxsfk2mq': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'dcn25s37': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'u6nhhh52': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '4h824qah': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'la5hah4y': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'eoo33zuj': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'z8v7l36t': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'li46znhk': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '7min9h6i': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '79jx0rzy': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'jth0ps5q': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'dmzsbfxh': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'apk4tp9y': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'tslg1ndn': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'o33h8a9j': {
-      'es': '',
       'en': '',
       'fr': '',
     },
@@ -1775,353 +611,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'yehhf6kf': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '3nmzh2wl': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '6on616or': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '6fllbeuv': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '9p1uzk2h': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '2zdktzey': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'd0y5vvid': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'gdkdvodm': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'r2lu418h': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'cvqjuque': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'cj3050pg': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'mkfqldvm': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'is3na808': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'sho0yorh': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '4ct3djab': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'mowvfrks': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'srlw61er': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'wqbuaocz': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'frx6omzq': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'fuwbt0m5': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'qsrhn2y1': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '2vzjyqml': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'p0bdjfr6': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'lsu5rngn': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'sas196zk': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '43zua58v': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '9fh8kecm': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'qza9thbd': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '1sfurm05': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    '6k60dp7z': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '3yxb0phx': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zhv3ljf9': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'em6wmh0w': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'nng0rkpl': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'bc868kwp': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'ta0s6jle': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'fqzxqztm': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    '2tq2k6tk': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'k4bya62w': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '24mbegen': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'ufv4hel9': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'hl7aiwzy': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'qt1t8qnb': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'owy5by7c': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'm2zrormh': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'qvk7rbs2': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    '80c7e54f': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '592mzhcy': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    'mm8nhqoj': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '0cxs0tsv': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'ktnmu7uu': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    't6clauxq': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '6gfud4ky': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'evus9hcs': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'g79a3h7c': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '0nwrhl4p': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '8gmvk9lf': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'agtjkg7b': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'svbk2eyw': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'psq7e0id': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'qpt5k2ka': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    '9plj4a8f': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '69z1corn': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'd5gyatu4': {
-      'es': 'TIPO DE SINTOMA',
-      'en': '',
-      'fr': '',
-    },
-    'zw9qryer': {
-      'es': 'Indica que tanto:',
-      'en': '',
-      'fr': '',
-    },
-    'i95nenw0': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'go14llzn': {
-      'es': 'LEVE',
-      'en': '',
-      'fr': '',
-    },
-    'awjnbrgg': {
-      'es': 'MEDIO',
-      'en': '',
-      'fr': '',
-    },
-    'zlsnsltg': {
-      'es': 'FUERTE',
-      'en': '',
-      'fr': '',
-    },
-    '3ciq6kjl': {
-      'es': '',
+    'qbzu6q9t': {
+      'es': 'SINTOMAS',
       'en': '',
       'fr': '',
     },
@@ -2131,10 +622,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
   },
-  // AddPhone
+  // AddPhonePage
   {
     '9b27f89p': {
-      'es': 'Agrega nuevo contacto',
+      'es': 'Agregar nuevo contacto',
       'en': '',
       'fr': '',
     },
@@ -2144,12 +635,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     'gy4bikls': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'byuiymsa': {
-      'es': 'Aquí va el nombre',
+      'es': 'Nombre',
       'en': '',
       'fr': '',
     },
@@ -2160,6 +646,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'xv86i9r2': {
       'es': 'Añade el número del contacto',
+      'en': '',
+      'fr': '',
+    },
+    'mmfhfh9k': {
+      'es': 'Telefono',
       'en': '',
       'fr': '',
     },
@@ -2189,50 +680,40 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
   },
-  // settingPage
+  // SettingPage
   {
-    'px7tylqd': {
-      'es': 'Settings Page',
-      'en': '',
-      'fr': '',
-    },
-    'm0dpvi2o': {
-      'es': 'Please evaluate your options below.',
+    '9x79n7ud': {
+      'es': 'Ajustes',
       'en': '',
       'fr': '',
     },
     '3rqrc09w': {
-      'es': 'My Subscription',
-      'en': '',
-      'fr': '',
-    },
-    '1692lf9w': {
-      'es': 'Getting Started',
+      'es': 'Suscripción',
       'en': '',
       'fr': '',
     },
     'kxsfhebd': {
-      'es': 'About Us',
+      'es': 'Sobre Nosotros',
       'en': '',
       'fr': '',
     },
     'iuk4vptd': {
-      'es': 'Help',
+      'es': 'Ayuda',
       'en': '',
       'fr': '',
     },
     'ijrvicpx': {
-      'es': 'Privacy Policy',
+      'es': 'Pólitica de Privacidad',
       'en': '',
       'fr': '',
     },
     'kjjluboi': {
-      'es': 'Terms & Conditions',
+      'es': 'Términos y COndiciones',
       'en': '',
       'fr': '',
     },
     '8tigulmo': {
-      'es': 'Follow us on',
+      'es': 'Siguenos en:',
       'en': '',
       'fr': '',
     },
@@ -2241,13 +722,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'estwmcgi': {
-      'es': 'v0.0.1',
-      'en': '',
-      'fr': '',
-    },
     '6wyjdarb': {
-      'es': 'Log Out',
+      'es': 'Salir de mi cuenta',
       'en': '',
       'fr': '',
     },
@@ -2361,23 +837,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'rx2avhq4': {
-      'es': 'Nombre o Apodo de tu primer contacto',
+    'q10xpqem': {
+      'es': '1er Contacto',
       'en': '',
       'fr': '',
     },
     'ak9da7k5': {
-      'es': 'Telefono de su primer contacto',
+      'es': 'Telefono',
       'en': '',
       'fr': '',
     },
     'qe6y2h5t': {
-      'es': 'Nombre o Apodo de su segundo contacto',
+      'es': '2do contacto',
       'en': '',
       'fr': '',
     },
     'ba4uqeuz': {
-      'es': 'Telefono de su segundo contacto',
+      'es': 'Telefono',
       'en': '',
       'fr': '',
     },
@@ -2515,7 +991,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     's97nu6p4': {
-      'es': 'Contacta',
+      'es': 'MiAmigo\'s',
       'en': '',
       'fr': '',
     },
@@ -2535,7 +1011,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     'a6hy6zn2': {
-      'es': 'Juega',
+      'es': 'Tutoriales',
       'en': '',
       'fr': '',
     },
@@ -2749,121 +1225,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'ini0e2g4': {
-      'es': 'Descubre',
-      'en': '',
-      'fr': '',
-    },
-    'ljpk76hf': {
-      'es': 'QUE QUIERES LEER HOY...',
-      'en': '',
-      'fr': '',
-    },
-    '78y6gev5': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    'p1vjplvg': {
-      'es': 'El trenecito que si pudo.',
-      'en': '',
-      'fr': '',
-    },
-    'ol8jnfac': {
-      'es': 'By Ellen Fraud',
-      'en': '',
-      'fr': '',
-    },
-    'x7oyligr': {
-      'es': '5 min ',
-      'en': '',
-      'fr': '',
-    },
-    'nn0gpjya': {
-      'es': 'Narración Disponible',
-      'en': '',
-      'fr': '',
-    },
-    'aczjdddh': {
-      'es': 'El trenecito que si pudo.',
-      'en': '',
-      'fr': '',
-    },
-    'b7vei31s': {
-      'es': 'By Ellen Fraud',
-      'en': '',
-      'fr': '',
-    },
-    '5hm8evjx': {
-      'es': '5 min ',
-      'en': '',
-      'fr': '',
-    },
-    '3bo7t2x5': {
-      'es': 'Narración Disponible',
-      'en': '',
-      'fr': '',
-    },
-    '4s644odd': {
-      'es': 'El trenecito que si pudo.',
-      'en': '',
-      'fr': '',
-    },
-    'ojjhtndd': {
-      'es': 'By Ellen Fraud',
-      'en': '',
-      'fr': '',
-    },
-    'kpq1ppol': {
-      'es': '5 min ',
-      'en': '',
-      'fr': '',
-    },
-    'vlz01yuk': {
-      'es': 'Narración Disponible',
-      'en': '',
-      'fr': '',
-    },
-    'mtbe5lrb': {
-      'es': 'El trenecito que si pudo.',
-      'en': '',
-      'fr': '',
-    },
-    'q4v7mp7b': {
-      'es': 'By Ellen Fraud',
-      'en': '',
-      'fr': '',
-    },
-    's2udn2zn': {
-      'es': '5 min ',
-      'en': '',
-      'fr': '',
-    },
-    'vewf605j': {
-      'es': 'Narración Disponible',
-      'en': '',
-      'fr': '',
-    },
-    'k9n2o3bu': {
-      'es': 'El trenecito que si pudo.',
-      'en': '',
-      'fr': '',
-    },
-    'y4ny8q76': {
-      'es': 'By Ellen Fraud',
-      'en': '',
-      'fr': '',
-    },
-    'g6djpmyg': {
-      'es': '5 min ',
-      'en': '',
-      'fr': '',
-    },
-    '2humjz1h': {
-      'es': 'Narración Disponible',
-      'en': '',
-      'fr': '',
-    },
     '66ffy7u7': {
       'es': 'Home',
       'en': '',
@@ -2941,6 +1302,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
   },
+  // feelingTag
+  {
+    'd8her9kf': {
+      'es': 'Indica que tanto:',
+      'en': '',
+      'fr': '',
+    },
+    'v6oy1bnc': {
+      'es': 'MEDIO',
+      'en': '',
+      'fr': '',
+    },
+    'shpmgmiy': {
+      'es': 'LEVE',
+      'en': '',
+      'fr': '',
+    },
+    '60575gqc': {
+      'es': 'MEDIO',
+      'en': '',
+      'fr': '',
+    },
+    'snzzi35l': {
+      'es': 'FUERTE',
+      'en': '',
+      'fr': '',
+    },
+    'jdleddyq': {
+      'es': '',
+      'en': '',
+      'fr': '',
+    },
+  },
   // Miscellaneous
   {
     'g7rjfg3w': {
@@ -2950,6 +1344,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1qr55jop': {
       'es': '',
+      'en': '',
+      'fr': '',
+    },
+    'kwoxmpck': {
+      'es':
+          'Permite que MiAmigo tenga acceso a tu microfono por temas de seguridad y usabilidad dentro de la APP.',
       'en': '',
       'fr': '',
     },

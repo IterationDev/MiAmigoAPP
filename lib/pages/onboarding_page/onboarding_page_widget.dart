@@ -10,6 +10,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'onboarding_page_model.dart';
 export 'onboarding_page_model.dart';
 
+/// Al 30/4 cuenta con los elementos necesarios de interfaz, unicamente falta
+/// agregar la accion al inicio de sesion de forma correcta
 class OnboardingPageWidget extends StatefulWidget {
   const OnboardingPageWidget({super.key});
 
@@ -61,14 +63,14 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
           FadeEffect(
             curve: Curves.easeInOut,
             delay: 300.0.ms,
-            duration: 300.0.ms,
+            duration: 600.0.ms,
             begin: 0.0,
             end: 1.0,
           ),
           ScaleEffect(
             curve: Curves.bounceOut,
             delay: 300.0.ms,
-            duration: 300.0.ms,
+            duration: 600.0.ms,
             begin: Offset(0.6, 0.6),
             end: Offset(1.0, 1.0),
           ),
@@ -79,8 +81,8 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
         effectsBuilder: () => [
           FlipEffect(
             curve: Curves.easeInOut,
-            delay: 90.0.ms,
-            duration: 830.0.ms,
+            delay: 400.0.ms,
+            duration: 1000.0.ms,
             begin: 0.0,
             end: 2.0,
           ),
@@ -178,10 +180,10 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                   gradient: LinearGradient(
                     colors: [
                       Color(0xFF4B7BA6),
-                      FlutterFlowTheme.of(context).primary,
-                      Color(0xFF7AA5BF)
+                      FlutterFlowTheme.of(context).common2,
+                      FlutterFlowTheme.of(context).common4
                     ],
-                    stops: [0.0, 0.5, 1.0],
+                    stops: [0.2, 0.5, 1.0],
                     begin: AlignmentDirectional(-1.0, -1.0),
                     end: AlignmentDirectional(1.0, 1.0),
                   ),
@@ -193,7 +195,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                     gradient: LinearGradient(
                       colors: [
                         Color(0x00FFFFFF),
-                        FlutterFlowTheme.of(context).secondaryBackground
+                        FlutterFlowTheme.of(context).common14
                       ],
                       stops: [0.0, 1.0],
                       begin: AlignmentDirectional(0.0, -1.0),
@@ -315,29 +317,31 @@ Ingresa a... */
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            textStyle:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
-                                      font: GoogleFonts.roboto(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .fontStyle,
-                                      ),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .fontStyle,
-                                    ),
+                            color: FlutterFlowTheme.of(context).accent2,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .override(
+                                  font: GoogleFonts.roboto(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .fontStyle,
+                                  ),
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .fontStyle,
+                                ),
                             elevation: 0.0,
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).accent2,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -353,8 +357,8 @@ Ingresa a... */
                         padding:
                             EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.goNamed(HomePageWidget.routeName);
                           },
                           text: FFLocalizations.of(context).getText(
                             'a7i4lhqy' /* INICIA SESION */,
@@ -366,7 +370,7 @@ Ingresa a... */
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).primary,
+                            color: FlutterFlowTheme.of(context).common2,
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(

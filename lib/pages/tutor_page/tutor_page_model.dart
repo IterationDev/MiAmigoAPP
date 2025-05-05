@@ -17,10 +17,6 @@ class TutorPageModel extends FlutterFlowModel<TutorPageWidget> {
   FocusNode? busqGameFocusNode;
   TextEditingController? busqGameTextController;
   String? Function(BuildContext, String?)? busqGameTextControllerValidator;
-  // State field(s) for busqCuent widget.
-  FocusNode? busqCuentFocusNode;
-  TextEditingController? busqCuentTextController;
-  String? Function(BuildContext, String?)? busqCuentTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -30,8 +26,5 @@ class TutorPageModel extends FlutterFlowModel<TutorPageWidget> {
     tabBarController?.dispose();
     busqGameFocusNode?.dispose();
     busqGameTextController?.dispose();
-
-    busqCuentFocusNode?.dispose();
-    busqCuentTextController?.dispose();
   }
 }

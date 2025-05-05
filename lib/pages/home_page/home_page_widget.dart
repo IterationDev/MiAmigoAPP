@@ -6,10 +6,12 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/fondo/fondo_widget.dart';
 import '/pages/tutor_tag/tutor_tag_widget.dart';
 import '/pages/users_tag/users_tag_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -45,6 +47,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -172,13 +176,13 @@ CON UN TOQUE */
                                     padding: EdgeInsets.fromLTRB(
                                       80.0,
                                       0,
-                                      0,
+                                      80.0,
                                       0,
                                     ),
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 1,
-                                      mainAxisSpacing: 2.0,
+                                      mainAxisSpacing: 60.0,
                                       childAspectRatio: 1.0,
                                     ),
                                     scrollDirection: Axis.horizontal,
@@ -188,53 +192,26 @@ CON UN TOQUE */
                                       final gridViewUsersAuthRecord =
                                           gridViewUsersAuthRecordList[
                                               gridViewIndex];
-                                      return StreamBuilder<
-                                          List<UsersAuthRecord>>(
-                                        stream: queryUsersAuthRecord(),
-                                        builder: (context, snapshot) {
-                                          // Customize what your widget looks like when it's loading.
-                                          if (!snapshot.hasData) {
-                                            return Center(
-                                              child: SizedBox(
-                                                width: 60.0,
-                                                height: 60.0,
-                                                child: SpinKitPumpingHeart(
-                                                  color: Color(0xFFA0C3D9),
-                                                  size: 60.0,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          List<UsersAuthRecord>
-                                              usersTagUsersAuthRecordList =
-                                              snapshot.data!;
-
-                                          return wrapWithModel(
-                                            model:
-                                                _model.usersTagModels.getModel(
-                                              gridViewUsersAuthRecord
-                                                  .reference.id,
-                                              gridViewIndex,
-                                            ),
-                                            updateCallback: () =>
-                                                safeSetState(() {}),
-                                            child: UsersTagWidget(
-                                              key: Key(
-                                                'Key6a2_${gridViewUsersAuthRecord.reference.id}',
-                                              ),
-                                              img: valueOrDefault<String>(
-                                                gridViewUsersAuthRecord
-                                                    .photoUrl,
-                                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/m4bakgiqppj6/userDefault.svg',
-                                              ),
-                                              refSesionUser:
-                                                  gridViewUsersAuthRecord
-                                                      .reference,
-                                              name: gridViewUsersAuthRecord
-                                                  .displayName,
-                                            ),
-                                          );
-                                        },
+                                      return wrapWithModel(
+                                        model: _model.usersTagModels.getModel(
+                                          gridViewUsersAuthRecord.reference.id,
+                                          gridViewIndex,
+                                        ),
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: UsersTagWidget(
+                                          key: Key(
+                                            'Key6a2_${gridViewUsersAuthRecord.reference.id}',
+                                          ),
+                                          img: valueOrDefault<String>(
+                                            gridViewUsersAuthRecord.photoUrl,
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/m4bakgiqppj6/userDefault.svg',
+                                          ),
+                                          refSesionUser:
+                                              gridViewUsersAuthRecord.reference,
+                                          name: gridViewUsersAuthRecord
+                                              .displayName,
+                                        ),
                                       );
                                     },
                                   );
@@ -280,13 +257,13 @@ CON UN TOQUE */
                                     padding: EdgeInsets.fromLTRB(
                                       80.0,
                                       0,
-                                      0,
+                                      80.0,
                                       0,
                                     ),
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 1,
-                                      mainAxisSpacing: 2.0,
+                                      mainAxisSpacing: 60.0,
                                       childAspectRatio: 1.0,
                                     ),
                                     scrollDirection: Axis.horizontal,
@@ -296,50 +273,24 @@ CON UN TOQUE */
                                       final gridViewTutorsAuthRecord =
                                           gridViewTutorsAuthRecordList[
                                               gridViewIndex];
-                                      return StreamBuilder<
-                                          List<TutorsAuthRecord>>(
-                                        stream: queryTutorsAuthRecord(),
-                                        builder: (context, snapshot) {
-                                          // Customize what your widget looks like when it's loading.
-                                          if (!snapshot.hasData) {
-                                            return Center(
-                                              child: SizedBox(
-                                                width: 60.0,
-                                                height: 60.0,
-                                                child: SpinKitPumpingHeart(
-                                                  color: Color(0xFFA0C3D9),
-                                                  size: 60.0,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          List<TutorsAuthRecord>
-                                              tutorTagTutorsAuthRecordList =
-                                              snapshot.data!;
-
-                                          return wrapWithModel(
-                                            model:
-                                                _model.tutorTagModels.getModel(
-                                              gridViewTutorsAuthRecord
-                                                  .reference.id,
-                                              gridViewIndex,
-                                            ),
-                                            updateCallback: () =>
-                                                safeSetState(() {}),
-                                            child: TutorTagWidget(
-                                              key: Key(
-                                                'Keybz9_${gridViewTutorsAuthRecord.reference.id}',
-                                              ),
-                                              img: gridViewTutorsAuthRecord
-                                                  .photoUrl,
-                                              refSesion:
-                                                  gridViewTutorsAuthRecord
-                                                      .reference,
-                                              name: gridViewTutorsAuthRecord
-                                                  .displayName,
-                                            ),
-                                          );
-                                        },
+                                      return wrapWithModel(
+                                        model: _model.tutorTagModels.getModel(
+                                          gridViewTutorsAuthRecord.reference.id,
+                                          gridViewIndex,
+                                        ),
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: TutorTagWidget(
+                                          key: Key(
+                                            'Keybz9_${gridViewTutorsAuthRecord.reference.id}',
+                                          ),
+                                          img:
+                                              gridViewTutorsAuthRecord.photoUrl,
+                                          refSesion: gridViewTutorsAuthRecord
+                                              .reference,
+                                          name: gridViewTutorsAuthRecord
+                                              .displayName,
+                                        ),
                                       );
                                     },
                                   );
@@ -354,21 +305,75 @@ CON UN TOQUE */
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsets.all(5.0),
-                                  child: FlutterFlowIconButton(
-                                    borderRadius: 100.0,
-                                    buttonSize: 80.0,
-                                    icon: Icon(
-                                      Icons.add_circle,
-                                      color: FlutterFlowTheme.of(context).info,
-                                      size: 60.0,
+                                MouseRegion(
+                                  opaque: false,
+                                  cursor:
+                                      MouseCursor.defer ?? MouseCursor.defer,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(5.0),
+                                    child: FlutterFlowIconButton(
+                                      borderRadius: 100.0,
+                                      buttonSize: 80.0,
+                                      icon: Icon(
+                                        Icons.add_circle,
+                                        color:
+                                            FlutterFlowTheme.of(context).info,
+                                        size: 60.0,
+                                      ),
+                                      onPressed: () async {
+                                        context.pushNamed(
+                                            CreateAccountPageWidget.routeName);
+                                      },
                                     ),
-                                    onPressed: () async {
-                                      context.pushNamed(
-                                          CreateAccountPageWidget.routeName);
-                                    },
                                   ),
+                                  onEnter: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered1 = true);
+                                    await actions.textToVoice(
+                                      'Crear una Cuenta',
+                                      '',
+                                    );
+                                  }),
+                                  onExit: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered1 = false);
+                                  }),
+                                ),
+                                MouseRegion(
+                                  opaque: false,
+                                  cursor:
+                                      MouseCursor.defer ?? MouseCursor.defer,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(5.0),
+                                    child: FlutterFlowIconButton(
+                                      borderRadius: 100.0,
+                                      buttonSize: 80.0,
+                                      hoverIconColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
+                                      icon: Icon(
+                                        Icons.login_rounded,
+                                        color:
+                                            FlutterFlowTheme.of(context).info,
+                                        size: 60.0,
+                                      ),
+                                      onPressed: () {
+                                        print('IconButton pressed ...');
+                                      },
+                                    ),
+                                  ),
+                                  onEnter: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered2 = true);
+                                    await actions.textToVoice(
+                                      'Inicia Sesion',
+                                      '',
+                                    );
+                                  }),
+                                  onExit: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered2 = false);
+                                  }),
                                 ),
                               ],
                             ),
@@ -379,9 +384,7 @@ CON UN TOQUE */
                               child: Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'l87em861' /* VERSION 1.0 */,
-                                  ),
+                                  FFAppState().version,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(

@@ -56,6 +56,14 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color common0;
+  late Color common2;
+  late Color common3;
+  late Color common4;
+  late Color common9;
+  late Color common13;
+  late Color common14;
+
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
   @Deprecated('Use displaySmall instead')
@@ -143,6 +151,14 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color common0 = Color(0xFF57636C);
+  late Color common2 = Color(0xFF7AA5BF);
+  late Color common3 = Color(0xFF4B7BA6);
+  late Color common4 = Color(0xFFA0C3D9);
+  late Color common9 = Color(0xFF9E9E9E);
+  late Color common13 = Color(0xFFDBE2E7);
+  late Color common14 = Color(0xDBFFFFFF);
 }
 
 abstract class Typography {
@@ -299,6 +315,14 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color common0 = Color(0xFF57636C);
+  late Color common2 = Color(0xFF7AA5BF);
+  late Color common3 = Color(0xFF4B7BA6);
+  late Color common4 = Color(0xFFA0C3D9);
+  late Color common9 = Color(0xFF9E9E9E);
+  late Color common13 = Color(0xFFDBE2E7);
+  late Color common14 = Color(0xDBFFFFFF);
 }
 
 extension TextStyleHelper on TextStyle {

@@ -22,6 +22,12 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  String _version = 'v.1.0.0';
+  String get version => _version;
+  set version(String value) {
+    _version = value;
+  }
+
   final _usersManager = StreamRequestManager<List<UsersAuthRecord>>();
   Stream<List<UsersAuthRecord>> users({
     String? uniqueQueryKey,

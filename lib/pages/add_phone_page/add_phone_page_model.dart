@@ -1,9 +1,10 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'add_phone_widget.dart' show AddPhoneWidget;
+import '/index.dart';
+import 'add_phone_page_widget.dart' show AddPhonePageWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class AddPhoneModel extends FlutterFlowModel<AddPhoneWidget> {
+class AddPhonePageModel extends FlutterFlowModel<AddPhonePageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for name widget.
@@ -15,6 +16,10 @@ class AddPhoneModel extends FlutterFlowModel<AddPhoneWidget> {
   TextEditingController? phoneTextController;
   final phoneMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
   String? Function(BuildContext, String?)? phoneTextControllerValidator;
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
 
   @override
   void initState(BuildContext context) {}
