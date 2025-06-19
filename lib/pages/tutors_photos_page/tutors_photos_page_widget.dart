@@ -195,7 +195,7 @@ class _TutorsPhotosPageWidgetState extends State<TutorsPhotosPageWidget> {
                                   ),
                                   child: Image.network(
                                     valueOrDefault<String>(
-                                      _model.uploadedFileUrl,
+                                      _model.uploadedFileUrl_uploadDataT,
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/hqp5mmglj9xp/LogoMu%C3%B1equito.svg',
                                     ),
                                     fit: BoxFit.cover,
@@ -227,8 +227,8 @@ class _TutorsPhotosPageWidgetState extends State<TutorsPhotosPageWidget> {
                                         selectedMedia.every((m) =>
                                             validateFileFormat(
                                                 m.storagePath, context))) {
-                                      safeSetState(
-                                          () => _model.isDataUploading = true);
+                                      safeSetState(() => _model
+                                          .isDataUploading_uploadDataT = true);
                                       var selectedUploadedFiles =
                                           <FFUploadedFile>[];
 
@@ -256,16 +256,17 @@ class _TutorsPhotosPageWidgetState extends State<TutorsPhotosPageWidget> {
                                             .map((u) => u!)
                                             .toList();
                                       } finally {
-                                        _model.isDataUploading = false;
+                                        _model.isDataUploading_uploadDataT =
+                                            false;
                                       }
                                       if (selectedUploadedFiles.length ==
                                               selectedMedia.length &&
                                           downloadUrls.length ==
                                               selectedMedia.length) {
                                         safeSetState(() {
-                                          _model.uploadedLocalFile =
+                                          _model.uploadedLocalFile_uploadDataT =
                                               selectedUploadedFiles.first;
-                                          _model.uploadedFileUrl =
+                                          _model.uploadedFileUrl_uploadDataT =
                                               downloadUrls.first;
                                         });
                                       } else {
@@ -277,7 +278,7 @@ class _TutorsPhotosPageWidgetState extends State<TutorsPhotosPageWidget> {
                                     await widget.tutorRef!
                                         .update(createTutorsAuthRecordData(
                                       photoUrl: valueOrDefault<String>(
-                                        _model.uploadedFileUrl,
+                                        _model.uploadedFileUrl_uploadDataT,
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/hqp5mmglj9xp/LogoMu%C3%B1equito.svg',
                                       ),
                                     ));

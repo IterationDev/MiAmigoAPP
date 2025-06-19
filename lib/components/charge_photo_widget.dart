@@ -235,8 +235,8 @@ class _ChargePhotoWidgetState extends State<ChargePhotoWidget> {
                                       selectedMedia.every((m) =>
                                           validateFileFormat(
                                               m.storagePath, context))) {
-                                    safeSetState(
-                                        () => _model.isDataUploading = true);
+                                    safeSetState(() => _model
+                                        .isDataUploading_uploadDataUw6 = true);
                                     var selectedUploadedFiles =
                                         <FFUploadedFile>[];
 
@@ -264,16 +264,17 @@ class _ChargePhotoWidgetState extends State<ChargePhotoWidget> {
                                           .map((u) => u!)
                                           .toList();
                                     } finally {
-                                      _model.isDataUploading = false;
+                                      _model.isDataUploading_uploadDataUw6 =
+                                          false;
                                     }
                                     if (selectedUploadedFiles.length ==
                                             selectedMedia.length &&
                                         downloadUrls.length ==
                                             selectedMedia.length) {
                                       safeSetState(() {
-                                        _model.uploadedLocalFile =
+                                        _model.uploadedLocalFile_uploadDataUw6 =
                                             selectedUploadedFiles.first;
-                                        _model.uploadedFileUrl =
+                                        _model.uploadedFileUrl_uploadDataUw6 =
                                             downloadUrls.first;
                                       });
                                     } else {

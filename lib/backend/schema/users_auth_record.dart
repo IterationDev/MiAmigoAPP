@@ -95,6 +95,11 @@ class UsersAuthRecord extends FirestoreRecord {
   String get photoUrlCont5 => _photoUrlCont5 ?? '';
   bool hasPhotoUrlCont5() => _photoUrlCont5 != null;
 
+  // "location" field.
+  LatLng? _location;
+  LatLng? get location => _location;
+  bool hasLocation() => _location != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -112,6 +117,7 @@ class UsersAuthRecord extends FirestoreRecord {
     _photoUrlCont3 = snapshotData['photo_url_Cont3'] as String?;
     _photoUrlCont4 = snapshotData['photo_url_Cont4'] as String?;
     _photoUrlCont5 = snapshotData['photo_url_Cont5'] as String?;
+    _location = snapshotData['location'] as LatLng?;
   }
 
   static CollectionReference get collection =>
@@ -163,6 +169,7 @@ Map<String, dynamic> createUsersAuthRecordData({
   String? photoUrlCont3,
   String? photoUrlCont4,
   String? photoUrlCont5,
+  LatLng? location,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -180,6 +187,7 @@ Map<String, dynamic> createUsersAuthRecordData({
       'photo_url_Cont3': photoUrlCont3,
       'photo_url_Cont4': photoUrlCont4,
       'photo_url_Cont5': photoUrlCont5,
+      'location': location,
     }.withoutNulls,
   );
 
@@ -207,7 +215,8 @@ class UsersAuthRecordDocumentEquality implements Equality<UsersAuthRecord> {
         e1?.photoUrlCont2 == e2?.photoUrlCont2 &&
         e1?.photoUrlCont3 == e2?.photoUrlCont3 &&
         e1?.photoUrlCont4 == e2?.photoUrlCont4 &&
-        e1?.photoUrlCont5 == e2?.photoUrlCont5;
+        e1?.photoUrlCont5 == e2?.photoUrlCont5 &&
+        e1?.location == e2?.location;
   }
 
   @override
@@ -227,7 +236,8 @@ class UsersAuthRecordDocumentEquality implements Equality<UsersAuthRecord> {
         e?.photoUrlCont2,
         e?.photoUrlCont3,
         e?.photoUrlCont4,
-        e?.photoUrlCont5
+        e?.photoUrlCont5,
+        e?.location
       ]);
 
   @override

@@ -14,12 +14,12 @@ class AddPhonePageModel extends FlutterFlowModel<AddPhonePageWidget> {
   // State field(s) for phone widget.
   FocusNode? phoneFocusNode;
   TextEditingController? phoneTextController;
-  final phoneMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  late MaskTextInputFormatter phoneMask;
   String? Function(BuildContext, String?)? phoneTextControllerValidator;
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
+  bool isDataUploading_uploadDataCont = false;
+  FFUploadedFile uploadedLocalFile_uploadDataCont =
       FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
+  String uploadedFileUrl_uploadDataCont = '';
 
   @override
   void initState(BuildContext context) {}

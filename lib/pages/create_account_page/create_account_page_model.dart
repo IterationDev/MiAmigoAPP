@@ -11,6 +11,8 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
 
   String? photos;
 
+  UsersAuthRecord? refUserAsigned;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TabBar widget.
@@ -20,6 +22,8 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   int get tabBarPreviousIndex =>
       tabBarController != null ? tabBarController!.previousIndex : 0;
 
+  // Stores action output result for [Firestore Query - Query a collection] action in TabBar widget.
+  List<UsersAuthRecord>? existe;
   // State field(s) for name widget.
   FocusNode? nameFocusNode;
   TextEditingController? nameTextController;
@@ -31,12 +35,12 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   // State field(s) for phoneNum widget.
   FocusNode? phoneNumFocusNode;
   TextEditingController? phoneNumTextController;
-  final phoneNumMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  late MaskTextInputFormatter phoneNumMask;
   String? Function(BuildContext, String?)? phoneNumTextControllerValidator;
   // State field(s) for birdthDay widget.
   FocusNode? birdthDayFocusNode;
   TextEditingController? birdthDayTextController;
-  final birdthDayMask = MaskTextInputFormatter(mask: '##/##/####');
+  late MaskTextInputFormatter birdthDayMask;
   String? Function(BuildContext, String?)? birdthDayTextControllerValidator;
   // State field(s) for cont1 widget.
   FocusNode? cont1FocusNode;
@@ -45,7 +49,7 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   // State field(s) for phone1 widget.
   FocusNode? phone1FocusNode;
   TextEditingController? phone1TextController;
-  final phone1Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  late MaskTextInputFormatter phone1Mask;
   String? Function(BuildContext, String?)? phone1TextControllerValidator;
   // State field(s) for cont2 widget.
   FocusNode? cont2FocusNode;
@@ -54,7 +58,7 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   // State field(s) for phone2 widget.
   FocusNode? phone2FocusNode;
   TextEditingController? phone2TextController;
-  final phone2Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  late MaskTextInputFormatter phone2Mask;
   String? Function(BuildContext, String?)? phone2TextControllerValidator;
   // State field(s) for catDiscap widget.
   String? catDiscapValue;
@@ -84,13 +88,13 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   // State field(s) for birdthDayTutor widget.
   FocusNode? birdthDayTutorFocusNode;
   TextEditingController? birdthDayTutorTextController;
-  final birdthDayTutorMask = MaskTextInputFormatter(mask: '##/##/####');
+  late MaskTextInputFormatter birdthDayTutorMask;
   String? Function(BuildContext, String?)?
       birdthDayTutorTextControllerValidator;
   // State field(s) for phoneTutor widget.
   FocusNode? phoneTutorFocusNode;
   TextEditingController? phoneTutorTextController;
-  final phoneTutorMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
+  late MaskTextInputFormatter phoneTutorMask;
   String? Function(BuildContext, String?)? phoneTutorTextControllerValidator;
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
@@ -103,8 +107,10 @@ class CreateAccountPageModel extends FlutterFlowModel<CreateAccountPageWidget> {
   late bool rePasswordVisibility;
   String? Function(BuildContext, String?)? rePasswordTextControllerValidator;
   // State field(s) for cargo widget.
-  List<String>? cargoValue;
-  FormFieldController<List<String>>? cargoValueController;
+  String? cargoValue;
+  FormFieldController<String>? cargoValueController;
+  // Stores action output result for [Firestore Query - Query a collection] action in cargo widget.
+  UsersAuthRecord? userAsignated;
   // Stores action output result for [Backend Call - Create Document] action in confirmTutor widget.
   TutorsAuthRecord? tutorCreated;
 

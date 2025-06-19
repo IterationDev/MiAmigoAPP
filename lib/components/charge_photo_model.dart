@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 class ChargePhotoModel extends FlutterFlowModel<ChargePhotoWidget> {
   ///  State fields for stateful widgets in this component.
 
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
+  bool isDataUploading_uploadDataUw6 = false;
+  FFUploadedFile uploadedLocalFile_uploadDataUw6 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
+  String uploadedFileUrl_uploadDataUw6 = '';
 
   @override
   void initState(BuildContext context) {}

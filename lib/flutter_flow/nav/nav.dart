@@ -198,8 +198,53 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: AddMiAmigoWidget.routeName,
+          path: AddMiAmigoWidget.routePath,
+          asyncParams: {
+            'data': getDoc(['tutorsAuth'], TutorsAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => AddMiAmigoWidget(
+            data: params.getParam(
+              'data',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: AddTutorialPageWidget.routeName,
+          path: AddTutorialPageWidget.routePath,
+          asyncParams: {
+            'data': getDoc(['usersAuth'], UsersAuthRecord.fromSnapshot),
+            'tutorData': getDoc(['tutorsAuth'], TutorsAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => AddTutorialPageWidget(
+            data: params.getParam(
+              'data',
+              ParamType.Document,
+            ),
+            tutorData: params.getParam(
+              'tutorData',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: DevelopWidget.routeName,
+          path: DevelopWidget.routePath,
+          asyncParams: {
+            'userRef': getDoc(['usersAuth'], UsersAuthRecord.fromSnapshot),
+          },
+          builder: (context, params) => DevelopWidget(
+            userRef: params.getParam(
+              'userRef',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

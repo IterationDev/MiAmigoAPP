@@ -586,32 +586,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'foq2u8xx': {
+    'ke3prtho': {
       'es': 'Qué sientes hoy...',
       'en': '',
       'fr': '',
     },
-    'iglowpea': {
-      'es': 'TODOS',
-      'en': '',
-      'fr': '',
-    },
-    'oa1js6u6': {
+    '9dnmi4oc': {
       'es': 'NEGATIVOS',
       'en': '',
       'fr': '',
     },
-    '03rozgll': {
+    '1eykvo4d': {
       'es': 'POSITIVOS',
       'en': '',
       'fr': '',
     },
-    'ialqpj8e': {
+    '90lqpw1s': {
       'es': 'NEUTROS',
       'en': '',
       'fr': '',
     },
-    'qbzu6q9t': {
+    'i0yn56yl': {
       'es': 'SINTOMAS',
       'en': '',
       'fr': '',
@@ -986,7 +981,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // TutorPage
   {
     'kljbrvio': {
-      'es': 'COMO ME SIENTO',
+      'es': 'STATS',
       'en': '',
       'fr': '',
     },
@@ -995,18 +990,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'cfsmzfl7': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '0rqr5qqx': {
-      'es': '',
-      'en': '',
-      'fr': '',
-    },
-    '98a1xqvm': {
-      'es': 'Añadir otro...',
+    '8t0vh5uh': {
+      'es': 'Agregar MiAmigo',
       'en': '',
       'fr': '',
     },
@@ -1015,213 +1000,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'fr': '',
     },
-    'px2t2rs0': {
-      'es': 'BUSCA TU JUEGO FAVORITO...',
-      'en': '',
-      'fr': '',
-    },
     '9k55u7t5': {
-      'es': '',
+      'es': 'GRABAR NUEVO TUTORIAL',
       'en': '',
       'fr': '',
     },
     'kq1x79f6': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    '70sivnfr': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    '1o9qbqep': {
-      'es': 'NAME GAME1',
+      'es': 'CATEGORIA:',
       'en': '',
       'fr': '',
     },
     'k5eccwi8': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'r30nx9yv': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'dqnejh0o': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'du5xvt4c': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    '104ljz07': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'rmzb0ime': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'io0tpof9': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'pga190zy': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    't21f4l5e': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    '5uh1jspx': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'yngj48fg': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    '4l0a4j0g': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    '4ilgroec': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'i1hgg0gd': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'kg1cvwz3': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'ambw57gh': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    'nosu4glf': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'aptid5uo': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'oqnrxl4w': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'b5o8gsda': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    'ps8fviwz': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'mghik8tm': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'wwgssffr': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'wh71g709': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    'm9frv9j3': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    '3flnzza7': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'kkz4xv14': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'kbb0bu6m': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    '65f3nfs7': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    'dgu2124c': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    '0tbv3ita': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'fmgipxbj': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    '7zfi78na': {
-      'es': '50%',
-      'en': '',
-      'fr': '',
-    },
-    '7yl55a6k': {
-      'es': 'DIFICULTAD:',
-      'en': '',
-      'fr': '',
-    },
-    'nbnabazp': {
-      'es': 'Hello World',
-      'en': '',
-      'fr': '',
-    },
-    'fvzm0m4a': {
-      'es': 'NAME GAME1',
-      'en': '',
-      'fr': '',
-    },
-    '7u3ja25y': {
-      'es': '50%',
+      'es': 'DURACION',
       'en': '',
       'fr': '',
     },
@@ -1254,6 +1044,110 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     '6ve8tqsc': {
+      'es': 'Home',
+      'en': '',
+      'fr': '',
+    },
+  },
+  // AddMiAmigo
+  {
+    '6u9fu1g0': {
+      'es': 'Agregar MiAmigo',
+      'en': '',
+      'fr': '',
+    },
+    'qpipetbb': {
+      'es': 'Selecciona el perfil...',
+      'en': '',
+      'fr': '',
+    },
+    '4304n2hr': {
+      'es': 'De quien eres tutor',
+      'en': '',
+      'fr': '',
+    },
+    '2dkv5n8h': {
+      'es': 'Buscar',
+      'en': '',
+      'fr': '',
+    },
+    'sgomewg6': {
+      'es': 'Gestionaras y podrás revisar información de:',
+      'en': '',
+      'fr': '',
+    },
+    's6efesbp': {
+      'es': 'AÑADIR',
+      'en': '',
+      'fr': '',
+    },
+    'zjacqubj': {
+      'es': 'Home',
+      'en': '',
+      'fr': '',
+    },
+  },
+  // AddTutorialPage
+  {
+    'pasxowez': {
+      'es': 'Agregar nuevo tutorial',
+      'en': '',
+      'fr': '',
+    },
+    's8gk8zst': {
+      'es': 'Añade el nombre del tutorial',
+      'en': '',
+      'fr': '',
+    },
+    'bc8mwcd4': {
+      'es': 'Nombre',
+      'en': '',
+      'fr': '',
+    },
+    'tq9cso26': {
+      'es': '\n',
+      'en': '',
+      'fr': '',
+    },
+    '07s3f70s': {
+      'es': 'Añade el tipo del tutorial',
+      'en': '',
+      'fr': '',
+    },
+    '0stljm84': {
+      'es': 'Tipo',
+      'en': '',
+      'fr': '',
+    },
+    'mxo5npok': {
+      'es': '\n',
+      'en': '',
+      'fr': '',
+    },
+    'o7emaamn': {
+      'es': 'Sube el tutorial',
+      'en': '',
+      'fr': '',
+    },
+    'x3dmw1qa': {
+      'es': 'AÑADIR',
+      'en': '',
+      'fr': '',
+    },
+    'elnhm7bz': {
+      'es': 'Home',
+      'en': '',
+      'fr': '',
+    },
+  },
+  // develop
+  {
+    '9y36vz4b': {
+      'es': 'Page Title',
+      'en': '',
+      'fr': '',
+    },
+    '2ze0t23g': {
       'es': 'Home',
       'en': '',
       'fr': '',

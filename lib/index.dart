@@ -15,3 +15,7 @@ export '/pages/create_account_page/create_account_page_widget.dart'
 export '/pages/tutor_page/tutor_page_widget.dart' show TutorPageWidget;
 export '/pages/tutors_photos_page/tutors_photos_page_widget.dart'
     show TutorsPhotosPageWidget;
+export '/pages/add_mi_amigo/add_mi_amigo_widget.dart' show AddMiAmigoWidget;
+export '/pages/add_tutorial_page/add_tutorial_page_widget.dart'
+    show AddTutorialPageWidget;
+export '/develop/develop_widget.dart' show DevelopWidget;

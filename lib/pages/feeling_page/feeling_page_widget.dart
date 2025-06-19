@@ -45,12 +45,12 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
 
     _model.tabBarController = TabController(
       vsync: this,
-      length: 5,
+      length: 4,
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
 
     animationsMap.addAll({
-      'columnOnPageLoadAnimation1': AnimationInfo(
+      'listViewOnPageLoadAnimation1': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
@@ -62,7 +62,7 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
           ),
         ],
       ),
-      'columnOnPageLoadAnimation2': AnimationInfo(
+      'listViewOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
@@ -74,7 +74,19 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
           ),
         ],
       ),
-      'columnOnPageLoadAnimation3': AnimationInfo(
+      'listViewOnPageLoadAnimation3': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+      'listViewOnPageLoadAnimation4': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
@@ -150,36 +162,40 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
+          child: Stack(
             children: [
-              Row(
+              Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 8.0, 0.0),
-                      child: TextFormField(
-                        controller: _model.searchBarTextController,
-                        focusNode: _model.searchBarFocusNode,
-                        onChanged: (_) => EasyDebounce.debounce(
-                          '_model.searchBarTextController',
-                          Duration(milliseconds: 1000),
-                          () async {
-                            _model.filtro = _model.searchBarTextController.text;
-                            safeSetState(() {});
-                          },
-                        ),
-                        autofocus: true,
-                        textCapitalization: TextCapitalization.characters,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: FFLocalizations.of(context).getText(
-                            'foq2u8xx' /* Qué sientes hoy... */,
-                          ),
-                          labelStyle:
-                              FlutterFlowTheme.of(context).labelMedium.override(
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 12.0, 8.0, 0.0),
+                          child: TextFormField(
+                            controller: _model.searchBarTextController,
+                            focusNode: _model.searchBarFocusNode,
+                            onChanged: (_) => EasyDebounce.debounce(
+                              '_model.searchBarTextController',
+                              Duration(milliseconds: 1000),
+                              () async {
+                                _model.filtro =
+                                    _model.searchBarTextController.text;
+                                safeSetState(() {});
+                              },
+                            ),
+                            autofocus: true,
+                            textCapitalization: TextCapitalization.characters,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: FFLocalizations.of(context).getText(
+                                'ke3prtho' /* Qué sientes hoy... */,
+                              ),
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
                                     font: GoogleFonts.roboto(
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -196,8 +212,9 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
                                         .labelMedium
                                         .fontStyle,
                                   ),
-                          hintStyle:
-                              FlutterFlowTheme.of(context).labelMedium.override(
+                              hintStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
                                     font: GoogleFonts.roboto(
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -214,41 +231,41 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
                                         .labelMedium
                                         .fontStyle,
                                   ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).error,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).error,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          filled: true,
-                          fillColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
-                          contentPadding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 24.0, 20.0, 24.0),
-                          suffixIcon:
-                              _model.searchBarTextController!.text.isNotEmpty
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).alternate,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).error,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).error,
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              filled: true,
+                              fillColor: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 24.0, 20.0, 24.0),
+                              suffixIcon: _model
+                                      .searchBarTextController!.text.isNotEmpty
                                   ? InkWell(
                                       onTap: () async {
                                         _model.searchBarTextController?.clear();
@@ -264,275 +281,358 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
                                       ),
                                     )
                                   : null,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  font: GoogleFonts.roboto(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                            validator: _model.searchBarTextControllerValidator
+                                .asValidator(context),
+                            inputFormatters: [
+                              if (!isAndroid && !isiOS)
+                                TextInputFormatter.withFunction(
+                                    (oldValue, newValue) {
+                                  return TextEditingValue(
+                                    selection: newValue.selection,
+                                    text: newValue.text.toCapitalization(
+                                        TextCapitalization.characters),
+                                  );
+                                }),
+                            ],
+                          ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.roboto(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
-                        validator: _model.searchBarTextControllerValidator
-                            .asValidator(context),
-                        inputFormatters: [
-                          if (!isAndroid && !isiOS)
-                            TextInputFormatter.withFunction(
-                                (oldValue, newValue) {
-                              return TextEditingValue(
-                                selection: newValue.selection,
-                                text: newValue.text.toCapitalization(
-                                    TextCapitalization.characters),
-                              );
-                            }),
-                        ],
                       ),
-                    ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            0.0, 12.0, 12.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30.0,
+                          borderWidth: 1.0,
+                          buttonSize: 50.0,
+                          hoverIconColor: FlutterFlowTheme.of(context).accent2,
+                          icon: Icon(
+                            Icons.record_voice_over_rounded,
+                            color: FlutterFlowTheme.of(context).common2,
+                            size: 30.0,
+                          ),
+                          onPressed: () {
+                            print('IconButton pressed ...');
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
-                    child: FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 30.0,
-                      borderWidth: 1.0,
-                      buttonSize: 50.0,
-                      hoverIconColor: FlutterFlowTheme.of(context).accent2,
-                      icon: Icon(
-                        Icons.record_voice_over_rounded,
-                        color: FlutterFlowTheme.of(context).common2,
-                        size: 30.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                  ),
-                ],
-              ),
-              Expanded(
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: TabBarView(
-                        controller: _model.tabBarController,
-                        children: [
-                          Container(),
-                          StreamBuilder<List<SentimientosNegativosRecord>>(
-                            stream: querySentimientosNegativosRecord(
-                              queryBuilder: (sentimientosNegativosRecord) =>
-                                  sentimientosNegativosRecord.where(
-                                'name',
-                                isEqualTo:
-                                    _model.filtro != '' ? _model.filtro : null,
-                              ),
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    child: SpinKitPumpingHeart(
-                                      color: Color(0xFFA0C3D9),
-                                      size: 60.0,
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: TabBarView(
+                            controller: _model.tabBarController,
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: StreamBuilder<
+                                    List<SentimientosNegativosRecord>>(
+                                  stream: querySentimientosNegativosRecord(
+                                    queryBuilder:
+                                        (sentimientosNegativosRecord) =>
+                                            sentimientosNegativosRecord.where(
+                                      'name',
+                                      isGreaterThanOrEqualTo:
+                                          _model.filtro != ''
+                                              ? _model.filtro
+                                              : null,
                                     ),
                                   ),
-                                );
-                              }
-                              List<SentimientosNegativosRecord>
-                                  columnSentimientosNegativosRecordList =
-                                  snapshot.data!;
-
-                              return SingleChildScrollView(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: List.generate(
-                                      columnSentimientosNegativosRecordList
-                                          .length, (columnIndex) {
-                                    final columnSentimientosNegativosRecord =
-                                        columnSentimientosNegativosRecordList[
-                                            columnIndex];
-                                    return wrapWithModel(
-                                      model: _model.feelingTagModels1.getModel(
-                                        columnSentimientosNegativosRecord
-                                            .reference.id,
-                                        columnIndex,
-                                      ),
-                                      updateCallback: () => safeSetState(() {}),
-                                      child: FeelingTagWidget(
-                                        key: Key(
-                                          'Keylgi_${columnSentimientosNegativosRecord.reference.id}',
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 60.0,
+                                          height: 60.0,
+                                          child: SpinKitPumpingHeart(
+                                            color: Color(0xFFA0C3D9),
+                                            size: 60.0,
+                                          ),
                                         ),
-                                        img: columnSentimientosNegativosRecord
-                                            .ilustracion,
-                                        name: columnSentimientosNegativosRecord
-                                            .name,
-                                        n1: columnSentimientosNegativosRecord
-                                            .nivel1,
-                                        n2: columnSentimientosNegativosRecord
-                                            .nivel2,
-                                        n3: columnSentimientosNegativosRecord
-                                            .nivel3,
-                                      ),
-                                    );
-                                  }),
+                                      );
+                                    }
+                                    List<SentimientosNegativosRecord>
+                                        listViewSentimientosNegativosRecordList =
+                                        snapshot.data!;
+
+                                    return ListView.builder(
+                                      padding: EdgeInsets.zero,
+                                      scrollDirection: Axis.vertical,
+                                      itemCount:
+                                          listViewSentimientosNegativosRecordList
+                                              .length,
+                                      itemBuilder: (context, listViewIndex) {
+                                        final listViewSentimientosNegativosRecord =
+                                            listViewSentimientosNegativosRecordList[
+                                                listViewIndex];
+                                        return wrapWithModel(
+                                          model:
+                                              _model.feelingTagModels1.getModel(
+                                            listViewSentimientosNegativosRecord
+                                                .reference.id,
+                                            listViewIndex,
+                                          ),
+                                          updateCallback: () =>
+                                              safeSetState(() {}),
+                                          child: FeelingTagWidget(
+                                            key: Key(
+                                              'Keylgi_${listViewSentimientosNegativosRecord.reference.id}',
+                                            ),
+                                            img:
+                                                listViewSentimientosNegativosRecord
+                                                    .ilustracion,
+                                            name:
+                                                listViewSentimientosNegativosRecord
+                                                    .name,
+                                            n1: listViewSentimientosNegativosRecord
+                                                .nivel1,
+                                            n2: listViewSentimientosNegativosRecord
+                                                .nivel2,
+                                            n3: listViewSentimientosNegativosRecord
+                                                .nivel3,
+                                          ),
+                                        );
+                                      },
+                                    ).animateOnPageLoad(animationsMap[
+                                        'listViewOnPageLoadAnimation1']!);
+                                  },
                                 ),
-                              ).animateOnPageLoad(
-                                  animationsMap['columnOnPageLoadAnimation1']!);
-                            },
-                          ),
-                          StreamBuilder<List<SentimientosPositivosRecord>>(
-                            stream: querySentimientosPositivosRecord(
-                              queryBuilder: (sentimientosPositivosRecord) =>
-                                  sentimientosPositivosRecord.where(
-                                'name',
-                                isEqualTo:
-                                    _model.filtro != '' ? _model.filtro : null,
                               ),
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    child: SpinKitPumpingHeart(
-                                      color: Color(0xFFA0C3D9),
-                                      size: 60.0,
-                                    ),
+                              StreamBuilder<List<SentimientosPositivosRecord>>(
+                                stream: querySentimientosPositivosRecord(
+                                  queryBuilder: (sentimientosPositivosRecord) =>
+                                      sentimientosPositivosRecord.where(
+                                    'name',
+                                    isGreaterThanOrEqualTo: _model.filtro != ''
+                                        ? _model.filtro
+                                        : null,
                                   ),
-                                );
-                              }
-                              List<SentimientosPositivosRecord>
-                                  columnSentimientosPositivosRecordList =
-                                  snapshot.data!;
-
-                              return SingleChildScrollView(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: List.generate(
-                                      columnSentimientosPositivosRecordList
-                                          .length, (columnIndex) {
-                                    final columnSentimientosPositivosRecord =
-                                        columnSentimientosPositivosRecordList[
-                                            columnIndex];
-                                    return wrapWithModel(
-                                      model: _model.feelingTagModels2.getModel(
-                                        columnSentimientosPositivosRecord
-                                            .reference.id,
-                                        columnIndex,
-                                      ),
-                                      updateCallback: () => safeSetState(() {}),
-                                      child: FeelingTagWidget(
-                                        key: Key(
-                                          'Key5zs_${columnSentimientosPositivosRecord.reference.id}',
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 60.0,
+                                        height: 60.0,
+                                        child: SpinKitPumpingHeart(
+                                          color: Color(0xFFA0C3D9),
+                                          size: 60.0,
                                         ),
-                                        img: columnSentimientosPositivosRecord
-                                            .ilustracion,
-                                        name: columnSentimientosPositivosRecord
-                                            .name,
-                                        n1: columnSentimientosPositivosRecord
-                                            .nivel1,
-                                        n2: columnSentimientosPositivosRecord
-                                            .nivel2,
-                                        n3: columnSentimientosPositivosRecord
-                                            .nivel3,
                                       ),
                                     );
-                                  }),
-                                ),
-                              ).animateOnPageLoad(
-                                  animationsMap['columnOnPageLoadAnimation2']!);
-                            },
-                          ),
-                          StreamBuilder<List<SentimientosNeutrosRecord>>(
-                            stream: querySentimientosNeutrosRecord(
-                              queryBuilder: (sentimientosNeutrosRecord) =>
-                                  sentimientosNeutrosRecord.where(
-                                'name',
-                                isEqualTo:
-                                    _model.filtro != '' ? _model.filtro : null,
+                                  }
+                                  List<SentimientosPositivosRecord>
+                                      listViewSentimientosPositivosRecordList =
+                                      snapshot.data!;
+
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount:
+                                        listViewSentimientosPositivosRecordList
+                                            .length,
+                                    itemBuilder: (context, listViewIndex) {
+                                      final listViewSentimientosPositivosRecord =
+                                          listViewSentimientosPositivosRecordList[
+                                              listViewIndex];
+                                      return wrapWithModel(
+                                        model:
+                                            _model.feelingTagModels2.getModel(
+                                          listViewSentimientosPositivosRecord
+                                              .reference.id,
+                                          listViewIndex,
+                                        ),
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: FeelingTagWidget(
+                                          key: Key(
+                                            'Key5zs_${listViewSentimientosPositivosRecord.reference.id}',
+                                          ),
+                                          img:
+                                              listViewSentimientosPositivosRecord
+                                                  .ilustracion,
+                                          name:
+                                              listViewSentimientosPositivosRecord
+                                                  .name,
+                                          n1: listViewSentimientosPositivosRecord
+                                              .nivel1,
+                                          n2: listViewSentimientosPositivosRecord
+                                              .nivel2,
+                                          n3: listViewSentimientosPositivosRecord
+                                              .nivel3,
+                                        ),
+                                      );
+                                    },
+                                  ).animateOnPageLoad(animationsMap[
+                                      'listViewOnPageLoadAnimation2']!);
+                                },
                               ),
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    child: SpinKitPumpingHeart(
-                                      color: Color(0xFFA0C3D9),
-                                      size: 60.0,
-                                    ),
+                              StreamBuilder<List<SentimientosNeutrosRecord>>(
+                                stream: querySentimientosNeutrosRecord(
+                                  queryBuilder: (sentimientosNeutrosRecord) =>
+                                      sentimientosNeutrosRecord.where(
+                                    'name',
+                                    isGreaterThanOrEqualTo: _model.filtro != ''
+                                        ? _model.filtro
+                                        : null,
                                   ),
-                                );
-                              }
-                              List<SentimientosNeutrosRecord>
-                                  columnSentimientosNeutrosRecordList =
-                                  snapshot.data!;
-
-                              return SingleChildScrollView(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: List.generate(
-                                      columnSentimientosNeutrosRecordList
-                                          .length, (columnIndex) {
-                                    final columnSentimientosNeutrosRecord =
-                                        columnSentimientosNeutrosRecordList[
-                                            columnIndex];
-                                    return wrapWithModel(
-                                      model: _model.feelingTagModels3.getModel(
-                                        columnSentimientosNeutrosRecord
-                                            .reference.id,
-                                        columnIndex,
-                                      ),
-                                      updateCallback: () => safeSetState(() {}),
-                                      child: FeelingTagWidget(
-                                        key: Key(
-                                          'Keyofu_${columnSentimientosNeutrosRecord.reference.id}',
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 60.0,
+                                        height: 60.0,
+                                        child: SpinKitPumpingHeart(
+                                          color: Color(0xFFA0C3D9),
+                                          size: 60.0,
                                         ),
-                                        img: columnSentimientosNeutrosRecord
-                                            .ilustracion,
-                                        name: columnSentimientosNeutrosRecord
-                                            .name,
-                                        n1: columnSentimientosNeutrosRecord
-                                            .nivel1,
-                                        n2: columnSentimientosNeutrosRecord
-                                            .nivel2,
-                                        n3: columnSentimientosNeutrosRecord
-                                            .nivel3,
                                       ),
                                     );
-                                  }),
+                                  }
+                                  List<SentimientosNeutrosRecord>
+                                      listViewSentimientosNeutrosRecordList =
+                                      snapshot.data!;
+
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount:
+                                        listViewSentimientosNeutrosRecordList
+                                            .length,
+                                    itemBuilder: (context, listViewIndex) {
+                                      final listViewSentimientosNeutrosRecord =
+                                          listViewSentimientosNeutrosRecordList[
+                                              listViewIndex];
+                                      return wrapWithModel(
+                                        model:
+                                            _model.feelingTagModels3.getModel(
+                                          listViewSentimientosNeutrosRecord
+                                              .reference.id,
+                                          listViewIndex,
+                                        ),
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: FeelingTagWidget(
+                                          key: Key(
+                                            'Keyofu_${listViewSentimientosNeutrosRecord.reference.id}',
+                                          ),
+                                          img: listViewSentimientosNeutrosRecord
+                                              .ilustracion,
+                                          name:
+                                              listViewSentimientosNeutrosRecord
+                                                  .name,
+                                          n1: listViewSentimientosNeutrosRecord
+                                              .nivel1,
+                                          n2: listViewSentimientosNeutrosRecord
+                                              .nivel2,
+                                          n3: listViewSentimientosNeutrosRecord
+                                              .nivel3,
+                                        ),
+                                      );
+                                    },
+                                  ).animateOnPageLoad(animationsMap[
+                                      'listViewOnPageLoadAnimation3']!);
+                                },
+                              ),
+                              StreamBuilder<List<SintomasRecord>>(
+                                stream: querySintomasRecord(
+                                  queryBuilder: (sintomasRecord) =>
+                                      sintomasRecord.where(
+                                    'name',
+                                    isGreaterThanOrEqualTo: _model.filtro != ''
+                                        ? _model.filtro
+                                        : null,
+                                  ),
                                 ),
-                              ).animateOnPageLoad(
-                                  animationsMap['columnOnPageLoadAnimation3']!);
-                            },
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 60.0,
+                                        height: 60.0,
+                                        child: SpinKitPumpingHeart(
+                                          color: Color(0xFFA0C3D9),
+                                          size: 60.0,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  List<SintomasRecord>
+                                      listViewSintomasRecordList =
+                                      snapshot.data!;
+
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount:
+                                        listViewSintomasRecordList.length,
+                                    itemBuilder: (context, listViewIndex) {
+                                      final listViewSintomasRecord =
+                                          listViewSintomasRecordList[
+                                              listViewIndex];
+                                      return wrapWithModel(
+                                        model:
+                                            _model.feelingTagModels4.getModel(
+                                          listViewSintomasRecord.reference.id,
+                                          listViewIndex,
+                                        ),
+                                        updateCallback: () =>
+                                            safeSetState(() {}),
+                                        child: FeelingTagWidget(
+                                          key: Key(
+                                            'Keyneq_${listViewSintomasRecord.reference.id}',
+                                          ),
+                                          img: listViewSintomasRecord
+                                              .ilustracion,
+                                          name: listViewSintomasRecord.name,
+                                          n1: listViewSintomasRecord.nivel1,
+                                          n2: listViewSintomasRecord.nivel2,
+                                          n3: listViewSintomasRecord.nivel3,
+                                        ),
+                                      );
+                                    },
+                                  ).animateOnPageLoad(animationsMap[
+                                      'listViewOnPageLoadAnimation4']!);
+                                },
+                              ),
+                            ],
                           ),
-                          Container(),
-                        ],
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment(-1.0, 0),
-                      child: FlutterFlowButtonTabBar(
-                        useToggleButtonStyle: false,
-                        isScrollable: true,
-                        labelStyle:
-                            FlutterFlowTheme.of(context).titleMedium.override(
+                        ),
+                        Align(
+                          alignment: Alignment(-1.0, 0),
+                          child: FlutterFlowButtonTabBar(
+                            useToggleButtonStyle: false,
+                            isScrollable: true,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .titleMedium
+                                .override(
                                   font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.bold,
                                     fontStyle: FlutterFlowTheme.of(context)
@@ -546,61 +646,57 @@ class _FeelingPageWidgetState extends State<FeelingPageWidget>
                                       .titleMedium
                                       .fontStyle,
                                 ),
-                        unselectedLabelStyle: TextStyle(),
-                        labelColor: Colors.white,
-                        unselectedLabelColor: Color(0xFF7AA5BF),
-                        backgroundColor: Color(0xFF7AA5BF),
-                        borderColor: Color(0xFF7AA5BF),
-                        borderWidth: 1.0,
-                        borderRadius: 12.0,
-                        elevation: 0.0,
-                        labelPadding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                        buttonMargin: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 12.0, 16.0, 0.0),
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        tabs: [
-                          Tab(
-                            text: FFLocalizations.of(context).getText(
-                              'iglowpea' /* TODOS */,
-                            ),
+                            unselectedLabelStyle: TextStyle(),
+                            labelColor: Colors.white,
+                            unselectedLabelColor: Color(0xFF7AA5BF),
+                            backgroundColor: Color(0xFF7AA5BF),
+                            borderColor: Color(0xFF7AA5BF),
+                            borderWidth: 1.0,
+                            borderRadius: 12.0,
+                            elevation: 0.0,
+                            labelPadding: EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 8.0, 0.0),
+                            buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 12.0, 16.0, 0.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            tabs: [
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '9dnmi4oc' /* NEGATIVOS */,
+                                ),
+                              ),
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '1eykvo4d' /* POSITIVOS */,
+                                ),
+                              ),
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  '90lqpw1s' /* NEUTROS */,
+                                ),
+                              ),
+                              Tab(
+                                text: FFLocalizations.of(context).getText(
+                                  'i0yn56yl' /* SINTOMAS */,
+                                ),
+                              ),
+                            ],
+                            controller: _model.tabBarController,
+                            onTap: (i) async {
+                              [
+                                () async {},
+                                () async {},
+                                () async {},
+                                () async {}
+                              ][i]();
+                            },
                           ),
-                          Tab(
-                            text: FFLocalizations.of(context).getText(
-                              'oa1js6u6' /* NEGATIVOS */,
-                            ),
-                          ),
-                          Tab(
-                            text: FFLocalizations.of(context).getText(
-                              '03rozgll' /* POSITIVOS */,
-                            ),
-                          ),
-                          Tab(
-                            text: FFLocalizations.of(context).getText(
-                              'ialqpj8e' /* NEUTROS */,
-                            ),
-                          ),
-                          Tab(
-                            text: FFLocalizations.of(context).getText(
-                              'qbzu6q9t' /* SINTOMAS */,
-                            ),
-                          ),
-                        ],
-                        controller: _model.tabBarController,
-                        onTap: (i) async {
-                          [
-                            () async {},
-                            () async {},
-                            () async {},
-                            () async {},
-                            () async {}
-                          ][i]();
-                        },
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -27,12 +27,15 @@ class FeelingPageModel extends FlutterFlowModel<FeelingPageWidget> {
   late FlutterFlowDynamicModels<FeelingTagModel> feelingTagModels2;
   // Models for feelingTag dynamic component.
   late FlutterFlowDynamicModels<FeelingTagModel> feelingTagModels3;
+  // Models for feelingTag dynamic component.
+  late FlutterFlowDynamicModels<FeelingTagModel> feelingTagModels4;
 
   @override
   void initState(BuildContext context) {
     feelingTagModels1 = FlutterFlowDynamicModels(() => FeelingTagModel());
     feelingTagModels2 = FlutterFlowDynamicModels(() => FeelingTagModel());
     feelingTagModels3 = FlutterFlowDynamicModels(() => FeelingTagModel());
+    feelingTagModels4 = FlutterFlowDynamicModels(() => FeelingTagModel());
   }
 
   @override
@@ -44,5 +47,6 @@ class FeelingPageModel extends FlutterFlowModel<FeelingPageWidget> {
     feelingTagModels1.dispose();
     feelingTagModels2.dispose();
     feelingTagModels3.dispose();
+    feelingTagModels4.dispose();
   }
 }

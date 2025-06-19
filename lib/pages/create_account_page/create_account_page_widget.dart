@@ -8,10 +8,12 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import '/index.dart';
+import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'create_account_page_model.dart';
 export 'create_account_page_model.dart';
 
@@ -31,6 +33,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
   late CreateAccountPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  LatLng? currentUserLocationValue;
 
   @override
   void initState() {
@@ -41,7 +44,51 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
       vsync: this,
       length: 2,
       initialIndex: 0,
-    )..addListener(() => safeSetState(() {}));
+    )
+      ..addListener(() => safeSetState(() {}))
+      ..addListener(() async {
+        if (_model.tabBarController!.indexIsChanging) {
+          return;
+        }
+
+        var _shouldSetState = false;
+        _model.existe = await queryUsersAuthRecordOnce();
+        _shouldSetState = true;
+        if (_model.existe?.length != null) {
+          safeSetState(() {
+            _model.tabBarController!.animateTo(
+              1,
+              duration: Duration(milliseconds: 300),
+              curve: Curves.ease,
+            );
+          });
+
+          if (_shouldSetState) safeSetState(() {});
+          return;
+        } else {
+          await showDialog(
+            context: context,
+            builder: (alertDialogContext) {
+              return AlertDialog(
+                title: Text('No hay Usuarios'),
+                content: Text(
+                    'Lo sentimos, para crear una cuenta de tutor, primero por favor crea las cuentas de usuario necesarias para los tuyos, o en su caso si ya tienes cuenta inicia sesión...'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(alertDialogContext),
+                    child: Text('Ok'),
+                  ),
+                ],
+              );
+            },
+          );
+          Navigator.pop(context);
+          if (_shouldSetState) safeSetState(() {});
+          return;
+        }
+
+        if (_shouldSetState) safeSetState(() {});
+      });
 
     _model.nameTextController ??= TextEditingController();
     _model.nameFocusNode ??= FocusNode();
@@ -52,21 +99,25 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
     _model.phoneNumTextController ??= TextEditingController();
     _model.phoneNumFocusNode ??= FocusNode();
 
+    _model.phoneNumMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
     _model.birdthDayTextController ??= TextEditingController();
     _model.birdthDayFocusNode ??= FocusNode();
 
+    _model.birdthDayMask = MaskTextInputFormatter(mask: '##/##/####');
     _model.cont1TextController ??= TextEditingController();
     _model.cont1FocusNode ??= FocusNode();
 
     _model.phone1TextController ??= TextEditingController();
     _model.phone1FocusNode ??= FocusNode();
 
+    _model.phone1Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
     _model.cont2TextController ??= TextEditingController();
     _model.cont2FocusNode ??= FocusNode();
 
     _model.phone2TextController ??= TextEditingController();
     _model.phone2FocusNode ??= FocusNode();
 
+    _model.phone2Mask = MaskTextInputFormatter(mask: '##-##-##-##-##');
     _model.nameTutorTextController ??= TextEditingController();
     _model.nameTutorFocusNode ??= FocusNode();
 
@@ -76,9 +127,11 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
     _model.birdthDayTutorTextController ??= TextEditingController();
     _model.birdthDayTutorFocusNode ??= FocusNode();
 
+    _model.birdthDayTutorMask = MaskTextInputFormatter(mask: '##/##/####');
     _model.phoneTutorTextController ??= TextEditingController();
     _model.phoneTutorFocusNode ??= FocusNode();
 
+    _model.phoneTutorMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
     _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
 
@@ -2591,6 +2644,10 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                         0.0, 10.0, 0.0, 20.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
+                                        currentUserLocationValue =
+                                            await getCurrentUserLocation(
+                                                defaultLocation:
+                                                    LatLng(0.0, 0.0));
                                         var _shouldSetState = false;
                                         GoRouter.of(context).prepareAuthEvent();
                                         if (_model
@@ -2652,6 +2709,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                             }(),
                                             phoneNumber: _model
                                                 .phoneNumTextController.text,
+                                            location: currentUserLocationValue,
                                           ),
                                           ...mapToFirestore(
                                             {
@@ -2697,6 +2755,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                             }(),
                                             phoneNumber: _model
                                                 .phoneNumTextController.text,
+                                            location: currentUserLocationValue,
                                           ),
                                           ...mapToFirestore(
                                             {
@@ -4033,13 +4092,27 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                           snapshot.data!;
 
                                       return FlutterFlowDropDown<String>(
-                                        multiSelectController:
-                                            _model.cargoValueController ??=
-                                                FormListFieldController<String>(
-                                                    null),
+                                        controller: _model
+                                                .cargoValueController ??=
+                                            FormFieldController<String>(null),
                                         options: cargoUsersAuthRecordList
                                             .map((e) => e.displayName)
                                             .toList(),
+                                        onChanged: (val) async {
+                                          safeSetState(
+                                              () => _model.cargoValue = val);
+                                          _model.userAsignated =
+                                              await queryUsersAuthRecordOnce(
+                                            queryBuilder: (usersAuthRecord) =>
+                                                usersAuthRecord.where(
+                                              'display_name',
+                                              isEqualTo: _model.cargoValue,
+                                            ),
+                                            singleRecord: true,
+                                          ).then((s) => s.firstOrNull);
+
+                                          safeSetState(() {});
+                                        },
                                         width: 350.0,
                                         height: 50.0,
                                         searchHintTextStyle: FlutterFlowTheme
@@ -4138,10 +4211,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                         hidesUnderline: true,
                                         isOverButton: true,
                                         isSearchable: true,
-                                        isMultiSelect: true,
-                                        onMultiSelectChanged: (val) =>
-                                            safeSetState(
-                                                () => _model.cargoValue = val),
+                                        isMultiSelect: false,
                                       );
                                     },
                                   ),
@@ -4158,7 +4228,8 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                         '') ||
                                     (_model.rePasswordTextController.text ==
                                         '') ||
-                                    (_model.cargoValue?.length == null)))
+                                    (_model.cargoValue == null ||
+                                        _model.cargoValue == '')))
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 20.0),
@@ -4194,37 +4265,61 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
 
                                         var tutorsAuthRecordReference =
                                             TutorsAuthRecord.collection.doc();
-                                        await tutorsAuthRecordReference
-                                            .set(createTutorsAuthRecordData(
-                                          email: _model
-                                              .emailTutorTextController.text,
-                                          displayName: _model
-                                              .nameTutorTextController.text,
-                                          createdTime: getCurrentTimestamp,
-                                          phoneNumber: _model
-                                              .phoneTutorTextController.text,
-                                          pasword: _model
-                                              .rePasswordTextController.text,
-                                        ));
+                                        await tutorsAuthRecordReference.set({
+                                          ...createTutorsAuthRecordData(
+                                            email: _model
+                                                .emailTutorTextController.text,
+                                            displayName: _model
+                                                .nameTutorTextController.text,
+                                            createdTime: getCurrentTimestamp,
+                                            phoneNumber: _model
+                                                .phoneTutorTextController.text,
+                                            pasword: _model
+                                                .rePasswordTextController.text,
+                                            uid: random_data.randomString(
+                                              6,
+                                              6,
+                                              true,
+                                              true,
+                                              true,
+                                            ),
+                                          ),
+                                          ...mapToFirestore(
+                                            {
+                                              'usersAsigned': [
+                                                _model.userAsignated?.reference
+                                              ],
+                                            },
+                                          ),
+                                        });
                                         _model.tutorCreated = TutorsAuthRecord
-                                            .getDocumentFromData(
-                                                createTutorsAuthRecordData(
-                                                  email: _model
-                                                      .emailTutorTextController
-                                                      .text,
-                                                  displayName: _model
-                                                      .nameTutorTextController
-                                                      .text,
-                                                  createdTime:
-                                                      getCurrentTimestamp,
-                                                  phoneNumber: _model
-                                                      .phoneTutorTextController
-                                                      .text,
-                                                  pasword: _model
-                                                      .rePasswordTextController
-                                                      .text,
-                                                ),
-                                                tutorsAuthRecordReference);
+                                            .getDocumentFromData({
+                                          ...createTutorsAuthRecordData(
+                                            email: _model
+                                                .emailTutorTextController.text,
+                                            displayName: _model
+                                                .nameTutorTextController.text,
+                                            createdTime: getCurrentTimestamp,
+                                            phoneNumber: _model
+                                                .phoneTutorTextController.text,
+                                            pasword: _model
+                                                .rePasswordTextController.text,
+                                            uid: random_data.randomString(
+                                              6,
+                                              6,
+                                              true,
+                                              true,
+                                              true,
+                                            ),
+                                          ),
+                                          ...mapToFirestore(
+                                            {
+                                              'usersAsigned': [
+                                                _model.userAsignated?.reference
+                                              ],
+                                            },
+                                          ),
+                                        }, tutorsAuthRecordReference);
                                         _shouldSetState = true;
                                         await authManager
                                             .sendEmailVerification();
@@ -4247,36 +4342,24 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                             );
                                           },
                                         );
-                                        await Future.wait([
-                                          Future(() async {
-                                            safeSetState(() {
-                                              _model.cargoValueController
-                                                  ?.reset();
-                                            });
-                                          }),
-                                          Future(() async {
-                                            safeSetState(() {
-                                              _model.phone2TextController
-                                                  ?.clear();
-                                              _model.phone2Mask.clear();
-                                              _model.nameTutorTextController
-                                                  ?.clear();
-                                              _model.emailTutorTextController
-                                                  ?.clear();
-                                              _model
-                                                  .birdthDayTutorTextController
-                                                  ?.clear();
-                                              _model.birdthDayTutorMask.clear();
-                                              _model.passwordTextController
-                                                  ?.clear();
-                                              _model.rePasswordTextController
-                                                  ?.clear();
-                                              _model.phoneTutorTextController
-                                                  ?.clear();
-                                              _model.phoneTutorMask.clear();
-                                            });
-                                          }),
-                                        ]);
+                                        safeSetState(() {
+                                          _model.phone2TextController?.clear();
+                                          _model.phone2Mask.clear();
+                                          _model.nameTutorTextController
+                                              ?.clear();
+                                          _model.emailTutorTextController
+                                              ?.clear();
+                                          _model.birdthDayTutorTextController
+                                              ?.clear();
+                                          _model.birdthDayTutorMask.clear();
+                                          _model.passwordTextController
+                                              ?.clear();
+                                          _model.rePasswordTextController
+                                              ?.clear();
+                                          _model.phoneTutorTextController
+                                              ?.clear();
+                                          _model.phoneTutorMask.clear();
+                                        });
                                         var confirmDialogResponse =
                                             await showDialog<bool>(
                                                   context: context,
@@ -4328,6 +4411,10 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                             },
                                           );
 
+                                          safeSetState(() {
+                                            _model.cargoValueController
+                                                ?.reset();
+                                          });
                                           if (_shouldSetState)
                                             safeSetState(() {});
                                           return;
@@ -4350,6 +4437,10 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget>
                                             },
                                           );
 
+                                          safeSetState(() {
+                                            _model.cargoValueController
+                                                ?.reset();
+                                          });
                                           if (_shouldSetState)
                                             safeSetState(() {});
                                           return;

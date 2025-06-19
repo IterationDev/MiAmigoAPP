@@ -1,1 +1,2 @@
+NSMicrophoneUsageDescription = "Permite que MiAmigo tenga acceso a tu microfono por temas de seguridad y usabilidad dentro de la APP.";
 NSLocationWhenInUseUsageDescription = "Permite que MiAmigo tenga acceso a tu ubicación por temas de seguridad y localización en caso de emergencias.";

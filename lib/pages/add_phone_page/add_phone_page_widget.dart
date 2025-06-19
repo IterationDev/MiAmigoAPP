@@ -10,6 +10,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'add_phone_page_model.dart';
 export 'add_phone_page_model.dart';
 
@@ -44,6 +45,7 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
     _model.phoneTextController ??= TextEditingController();
     _model.phoneFocusNode ??= FocusNode();
 
+    _model.phoneMask = MaskTextInputFormatter(mask: '##-##-##-##-##');
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
           _model.nameTextController?.text = FFLocalizations.of(context).getText(
             'o37geslz' /* 
@@ -435,7 +437,7 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                         ),
                         child: Image.network(
                           valueOrDefault<String>(
-                            _model.uploadedFileUrl,
+                            _model.uploadedFileUrl_uploadDataCont,
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mi-amigo-v1-e5ixbf/assets/hqp5mmglj9xp/LogoMu%C3%B1equito.svg',
                           ),
                           fit: BoxFit.cover,
@@ -466,7 +468,8 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                           if (selectedMedia != null &&
                               selectedMedia.every((m) =>
                                   validateFileFormat(m.storagePath, context))) {
-                            safeSetState(() => _model.isDataUploading = true);
+                            safeSetState(() =>
+                                _model.isDataUploading_uploadDataCont = true);
                             var selectedUploadedFiles = <FFUploadedFile>[];
 
                             var downloadUrls = <String>[];
@@ -491,15 +494,16 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                                   .map((u) => u!)
                                   .toList();
                             } finally {
-                              _model.isDataUploading = false;
+                              _model.isDataUploading_uploadDataCont = false;
                             }
                             if (selectedUploadedFiles.length ==
                                     selectedMedia.length &&
                                 downloadUrls.length == selectedMedia.length) {
                               safeSetState(() {
-                                _model.uploadedLocalFile =
+                                _model.uploadedLocalFile_uploadDataCont =
                                     selectedUploadedFiles.first;
-                                _model.uploadedFileUrl = downloadUrls.first;
+                                _model.uploadedFileUrl_uploadDataCont =
+                                    downloadUrls.first;
                               });
                             } else {
                               safeSetState(() {});
@@ -518,7 +522,7 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                       widget.data?.photoUrlCont3 == '') {
                     await widget.data!.reference.update({
                       ...createUsersAuthRecordData(
-                        photoUrlCont3: _model.uploadedFileUrl,
+                        photoUrlCont3: _model.uploadedFileUrl_uploadDataCont,
                       ),
                       ...mapToFirestore(
                         {
@@ -562,7 +566,7 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                         widget.data?.photoUrlCont4 == '') {
                       await widget.data!.reference.update({
                         ...createUsersAuthRecordData(
-                          photoUrlCont4: _model.uploadedFileUrl,
+                          photoUrlCont4: _model.uploadedFileUrl_uploadDataCont,
                         ),
                         ...mapToFirestore(
                           {
@@ -607,7 +611,8 @@ class _AddPhonePageWidgetState extends State<AddPhonePageWidget> {
                           widget.data?.photoUrlCont5 == '') {
                         await widget.data!.reference.update({
                           ...createUsersAuthRecordData(
-                            photoUrlCont5: _model.uploadedFileUrl,
+                            photoUrlCont5:
+                                _model.uploadedFileUrl_uploadDataCont,
                           ),
                           ...mapToFirestore(
                             {

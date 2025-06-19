@@ -91,5 +91,24 @@ service cloud.firestore {
       allow write: if false;
       allow delete: if false;
     }
+
+    match /tutorsAuth/{parent}/tutorials/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/tutorials/{document} {
+      allow read: if true;
+    }
+
+
+    match /AllSintAndFeel/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
   }
 }

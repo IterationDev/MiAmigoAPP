@@ -15,6 +15,8 @@ import 'schema/sentimientos_negativos_record.dart';
 import 'schema/sintomas_record.dart';
 import 'schema/sentimientos_positivos_record.dart';
 import 'schema/sentimientos_neutros_record.dart';
+import 'schema/tutorials_record.dart';
+import 'schema/all_sint_and_feel_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -36,6 +38,8 @@ export 'schema/sentimientos_negativos_record.dart';
 export 'schema/sintomas_record.dart';
 export 'schema/sentimientos_positivos_record.dart';
 export 'schema/sentimientos_neutros_record.dart';
+export 'schema/tutorials_record.dart';
+export 'schema/all_sint_and_feel_record.dart';
 
 /// Functions to query TiposDeDiscRecords (as a Stream and as a Future).
 Future<int> queryTiposDeDiscRecordCount({
@@ -516,6 +520,83 @@ Future<List<SentimientosNeutrosRecord>> querySentimientosNeutrosRecordOnce({
     queryCollectionOnce(
       SentimientosNeutrosRecord.collection,
       SentimientosNeutrosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query TutorialsRecords (as a Stream and as a Future).
+Future<int> queryTutorialsRecordCount({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      TutorialsRecord.collection(parent),
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<TutorialsRecord>> queryTutorialsRecord({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      TutorialsRecord.collection(parent),
+      TutorialsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<TutorialsRecord>> queryTutorialsRecordOnce({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      TutorialsRecord.collection(parent),
+      TutorialsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query AllSintAndFeelRecords (as a Stream and as a Future).
+Future<int> queryAllSintAndFeelRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      AllSintAndFeelRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<AllSintAndFeelRecord>> queryAllSintAndFeelRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      AllSintAndFeelRecord.collection,
+      AllSintAndFeelRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<AllSintAndFeelRecord>> queryAllSintAndFeelRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      AllSintAndFeelRecord.collection,
+      AllSintAndFeelRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

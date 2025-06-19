@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'tutors_photos_page_widget.dart' show TutorsPhotosPageWidget;
@@ -8,12 +9,14 @@ class TutorsPhotosPageModel extends FlutterFlowModel<TutorsPhotosPageWidget> {
 
   String? photos;
 
+  UsersAuthRecord? refUserAsigned;
+
   ///  State fields for stateful widgets in this page.
 
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
+  bool isDataUploading_uploadDataT = false;
+  FFUploadedFile uploadedLocalFile_uploadDataT =
       FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
+  String uploadedFileUrl_uploadDataT = '';
 
   @override
   void initState(BuildContext context) {}
